@@ -2,7 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
   "organizeImports": {
     "enabled": true
-  }, //lint/style/useImportType:
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -12,7 +12,36 @@
         "noDangerouslySetInnerHtmlWithChildren": "off"
       },
       "style": {
-        "useImportType": "off"
+        "useImportType": "off",
+        "useTemplate": {
+          "level": "error",
+          "fix": "safe"
+        },
+
+        "noNonNullAssertion": "error",
+        "useNamingConvention": {
+          "level": "warn",
+          "options": {
+            "enumMemberCase": "CONSTANT_CASE",
+            "strictCase": false
+          }
+        },
+        "useSelfClosingElements": {
+          "level": "error",
+          "fix": "safe"
+        }
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "warn",
+        "noInvalidUseBeforeDeclaration": "warn"
       }
     }
   },
@@ -20,6 +49,7 @@
     "ignore": ["dist/**", "*.js", "*.cjs", "*.mjs", "*.spec.ts", "node_modules/**", "./dist/**"]
   },
   "formatter": {
+    "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 120
