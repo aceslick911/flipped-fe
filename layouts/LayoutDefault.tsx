@@ -6,6 +6,7 @@ import { Link } from '../components/Link.js';
 
 import Header from '#V2/Header';
 import { styled } from 'styled-components';
+import Footer from '#V2/Footer';
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
@@ -18,6 +19,7 @@ export default function LayoutDefault({ children }: { children: React.ReactNode 
         <Link href="/star-wars">Data Fetching</Link>
       </Sidebar>
       <Content>{children}</Content>
+      <Footer />
     </Root>
   );
 }
