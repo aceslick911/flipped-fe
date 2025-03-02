@@ -14,7 +14,11 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client", "vike-react"],
     "jsx": "preserve",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+
+    "paths": {
+      "#V2/*": ["./components/FlippedV2/*"],
+    }
   },
   "exclude": ["dist"]
 }
