@@ -6,12 +6,14 @@ import Layout from "../layouts/LayoutDefault.js";
 // https://vike.dev/config
 
 export default {
-  // https://vike.dev/Layout
-  Layout,
+	prerender: true,
 
-  // https://vike.dev/head-tags
-  title: "My Vike App",
-  description: "Demo showcasing Vike",
+	// https://vike.dev/Layout
+	Layout,
 
-  extends: vikeReact,
+	// https://vike.dev/head-tags
+	title: "My Vike App",
+	description: "Demo showcasing Vike",
+
+	extends: vikeReact,
 } satisfies Config;
