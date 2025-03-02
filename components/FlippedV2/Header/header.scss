@@ -1,0 +1,294 @@
+.comp-header{
+
+  .device-desktop{
+    &, & * {
+        box-sizing: border-box;
+    }
+    
+
+        background: var(--flipped-navy, #0f1533);
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: flex-start;
+        justify-content: center;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+
+    
+    .left-pad {
+        align-self: stretch;
+        flex-shrink: 0;
+        width: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .wrap {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        flex: 1;
+        min-width: 167px;
+        max-width: var(--container-width-max, 1120px);
+        position: relative;
+    }
+    
+    .logos {
+        flex-shrink: 0;
+        width: 170px;
+        height: 65.49px;
+        position: relative;
+        overflow: visible;
+    }
+    
+    .header-links-container {
+        background: var(--background, #0f1533);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex: 1;
+        min-width: 132px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-links {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: flex-start;
+        justify-content: flex-end;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+    }
+    
+    .v-apart {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex: 1;
+        min-height: 102px;
+        position: relative;
+    }
+    
+    .phone-account {
+        display: flex;
+        flex-direction: row;
+        gap: 19px;
+        row-gap: 8px;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        min-height: 62px;
+        position: relative;
+    }
+    
+    .padded-hover-button {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-links2 {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        min-height: 32px;
+        position: relative;
+    }
+    
+    .call-icon {
+        flex-shrink: 0;
+        width: 14px;
+        height: 12px;
+        position: relative;
+        overflow: visible;
+    }
+    
+    .phone-number {
+        color: var(--text-fill, #ffffff);
+        text-align: right;
+        font-family: 'Poppins-Regular', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        position: relative;
+    }
+    
+    .account-links {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        flex: 1;
+        min-width: 79px;
+        max-width: 169px;
+        position: relative;
+    }
+    
+    .top-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex: 1;
+        position: relative;
+    }
+    
+    .padded-hover-button2 {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+        flex-shrink: 0;
+        min-width: 117px;
+        max-width: 169px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-links3 {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-content: center;
+        flex: 1;
+        max-width: 159px;
+        position: relative;
+    }
+    
+    .login-and-my-account {
+        color: var(--text-fill, #ffffff);
+        text-align: right;
+        font-family: 'Poppins-Regular', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    
+    .icon {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        position: relative;
+    }
+    
+    .circle {
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        overflow: visible;
+    }
+    
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        row-gap: 5px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        width: 100%;
+        flex-shrink: 0;
+        max-width: 859px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .padded-hover-button3 {
+        background: var(--background, #0f1533);
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .instance-swapper {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+    }
+    
+    .instance-swap {
+        color: var(--text-fill, #ffffff);
+        text-align: right;
+        font-family: 'Poppins-Regular', sans-serif;
+        font-size: 16px;
+        line-height: 40px;
+        font-weight: 400;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    
+    .right-pad {
+        align-self: stretch;
+        flex-shrink: 0;
+        width: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+  }
+
+
+}

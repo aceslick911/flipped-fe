@@ -738,7 +738,7 @@ acorn@^8.0.0:
 
 babel-plugin-styled-components@^2.1.4:
   version "2.1.4"
-  resolved "https://registry.npmjs.org/babel-plugin-styled-components/-/babel-plugin-styled-components-2.1.4.tgz"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-2.1.4.tgz#9a1f37c7f32ef927b4b008b529feb4a2c82b1092"
   integrity sha512-Xgp9g+A/cG47sUyRwwYxGM4bR/jDRg5N6it/8+HxCnbT5XNKSKDT9xm4oag/osgqjC2It/vH0yXsomOG6k558g==
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.22.5"
@@ -1327,7 +1327,7 @@ varint@^6.0.0:
 
 vike-react-styled-components@^1.0.2:
   version "1.0.2"
-  resolved "https://registry.npmjs.org/vike-react-styled-components/-/vike-react-styled-components-1.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/vike-react-styled-components/-/vike-react-styled-components-1.0.2.tgz#02625244a0b6b6996cacaebe1ae82a6447c7caa7"
   integrity sha512-ZPBFOa4TsxTYQVmiQqcE1OAvgIMLKWgcp29cwQs1Iv9OZFWYce7YNW9pOK37HaC3mGaSrhDlydlucG+T0XZTRw==
 
 vike-react@^0.5.13:

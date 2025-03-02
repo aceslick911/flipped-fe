@@ -5,16 +5,11 @@ import logoUrl from '../assets/logo.svg';
 import { Link } from '../components/Link.js';
 
 import Header from '#V2/Header';
+import { styled } from 'styled-components';
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        maxWidth: 900,
-        margin: 'auto',
-      }}
-    >
+    <Root>
       <Header />
       <Sidebar>
         <Logo />
@@ -23,7 +18,7 @@ export default function LayoutDefault({ children }: { children: React.ReactNode 
         <Link href="/star-wars">Data Fetching</Link>
       </Sidebar>
       <Content>{children}</Content>
-    </div>
+    </Root>
   );
 }
 
@@ -76,3 +71,8 @@ function Logo() {
     </div>
   );
 }
+
+const Root = styled.div`
+  display: flex;
+  flex-direction: column;
+  `;
