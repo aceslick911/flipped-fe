@@ -3,9 +3,9 @@ import { defineConfig } from 'vite';
 import vike from 'vike/plugin';
 
 export default defineConfig({
-	plugins: [vike({}), react({})],
-	build: {
-		target: 'es2022',
-	},
-	base: '/flipped-fe/',
+  plugins: [vike({}), react({})],
+  build: {
+    target: 'es2022',
+  },
+  base: '/flipped-fe/',
 });

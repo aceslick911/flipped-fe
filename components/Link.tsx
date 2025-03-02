@@ -1,12 +1,15 @@
-import React from "react";
-import { usePageContext } from "vike-react/usePageContext";
+import React from 'react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 export function Link({ href, children }: { href: string; children: string }) {
+  if (!href.startsWith('/')) throw new Error('Link href should start with /');
+  href = import.meta.env.BASE_URL + href;
+
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
-  const isActive = href === "/" ? urlPathname === href : urlPathname.startsWith(href);
+  const isActive = href === '/' ? urlPathname === href : urlPathname.startsWith(href);
   return (
-    <a href={href} className={isActive ? "is-active" : undefined}>
+    <a href={href} className={isActive ? 'is-active' : undefined}>
       {children}
     </a>
   );

@@ -23,7 +23,14 @@ The project is deployed at: [https://aceslick911.github.io/flipped-fe/](https://
 
 This app is powered by [Vike](https://vike.dev) and [React](https://react.dev/learn). It is configured to use server-side rendering and is deployed on GitHub Pages.
 
+## Recommended VS Code Extensions
+
+To enhance your development experience, it is recommended to install the following VS Code extension:
+
+* [Biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
+
 ## Setup
+
 
 To set up the project, run the following commands:
 
