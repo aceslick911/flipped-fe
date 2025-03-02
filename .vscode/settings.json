@@ -4,5 +4,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.ts": "always",
     "source.fixAll.biome": "always"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   }
 }

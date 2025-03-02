@@ -1,9 +1,11 @@
 import { styled } from 'styled-components';
 import { Colors } from '#V2/theme';
 
+import './header.scss';
+
 const Header = () => {
   return (
-    <div className="device-desktop">
+    <div className="comp-header device-desktop">
       <div className="left-pad" />
       <div className="wrap">
         <svg
