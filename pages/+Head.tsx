@@ -1,26 +1,25 @@
 // https://vike.dev/Head
 
-import React from "react";
-import logoUrl from "../assets/logo.svg";
+import React from 'react';
+import logoUrl from '../assets/logo.svg';
 
+const gtag = import.meta.env.PUBLIC_ENV__GOOGLE_ANALYTICS;
 export default function HeadDefault() {
-  return (
-    <>
-      <link rel="icon" href={logoUrl} />
+	return (
+		<>
+			<link rel="icon" href={logoUrl} />
 
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_ENV__GOOGLE_ANALYTICS}`}
-      ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
+			<script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`} />
+			<script
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+				dangerouslySetInnerHTML={{
+					__html: `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${import.meta.env.PUBLIC_ENV__GOOGLE_ANALYTICS}');`,
-        }}
-      ></script>
-    </>
-  );
+          gtag('config', '${gtag}');`,
+				}}
+			/>
+		</>
+	);
 }

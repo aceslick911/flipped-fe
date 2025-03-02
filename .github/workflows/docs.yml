@@ -18,7 +18,8 @@ jobs:
         run: |
           yarn
           yarn build
-
+        env:
+          PUBLIC_ENV__GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
