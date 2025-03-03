@@ -1,5 +1,14 @@
+/* Remove achor decorations*/
 a {
   text-decoration: none;
+}
+
+
+div {
+  box-sizing: border-box;
+
+  display: flex;
+  white-space: break-spaces;
 }
 
 #sidebar a {
@@ -36,10 +45,85 @@ body.page-is-transitioning #page-content {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+
+  --pcol: var(--color-flipped-white, #ffffff);
+
+  --color-flipped-navy: #0f1533;
+  --color-flipped-aqua: #28d2cf;
+  --color-flipped-light-aqua: #92fffd;
+  --color-flipped-white: #ffffff;
+  --color-flipped-orange: #f28f1c;
+  --color-flipped-green: #003300;
+
+  --color-flipped-slide-background: #cceeed;
+
+  --color-flipped-line: #25d3ce;
+  --color-flipped-glow: #00fff2ff;
+  --color-flipped-glow-off: #00fff200;
+
+  --color-flipped-slide-background: #cceeed;
+  --color-flipped-Orange: #f28f1c;
+
+  --color-text-disabled: #888888;
+
+  --color-text: #0f1533;
+  --color-text-inverse: #ffffff;
+
+  --color-debug-1: maroon;
+  --color-debug-2: red;
+  --color-debug-3: orange;
+  --color-debug-4: yellow;
+  --color-debug-5: lime;
+  --color-debug-6: green;
+  --color-debug-7: cyan;
+  --color-debug-8: blue;
+  --color-debug-9: magenta;
+  --color-debug-10: purple;
+  --color-debug-11: pink;
+
 }
 
 #content {
   padding: 20px;
   padding-bottom: 50px;
 
+}
+
+.isScrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.isScrollable {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-flipped-navy, #0f1533);
+}
+
+
+@keyframes fadeSlideCard {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

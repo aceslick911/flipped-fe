@@ -1,6 +1,7 @@
 #test-content {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 
 
   a {
@@ -26,5 +27,17 @@
     box-sizing: border-box;
   }
 
+  #page-content {
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+
+  .invert {
+
+    a {
+      color: white;
+    }
+  }
 
 }

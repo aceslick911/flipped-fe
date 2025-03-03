@@ -1,4 +1,5 @@
 import './global.scss';
+import '#components/FlippedV2/fonts.css';
 
 import React from 'react';
 

@@ -1,0 +1,28 @@
+{
+  "applinks": {
+    "apps": [
+      "L7MM4C9G83.flipped.energy"
+    ],
+    "details": [
+      {
+        "appIDs": [
+          "L7MM4C9G83.energy.flipped"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Root Dir"
+          },
+          {
+            "/": "/privacy",
+            "comment": "privacy dir"
+          },
+          {
+            "/": "/*/*",
+            "comment": "two paths"
+          }
+        ]
+      }
+    ]
+  }
+}

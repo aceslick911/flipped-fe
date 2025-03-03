@@ -1,3 +1,4 @@
+import { styled } from 'styled-components';
 import { Link } from '../../components/Link';
 import './TestTemplate.scss';
 
@@ -11,31 +12,13 @@ export default function TestContents(props: { children?: React.ReactNode }) {
   const { children } = props;
   return (
     <div id="test-content">
-      <Sidebar>
-        <Logo />
+      <Sidebar id="sidebar" className="invert">
+        {/* <Logo /> */}
         <Link href="/">Welcome</Link>
         <Link href="/todo">Todo</Link>
         <Link href="/star-wars">Data Fetching</Link>
       </Sidebar>{' '}
       <Content>{children}</Content>
-    </div>
-  );
-}
-
-function Sidebar({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      id="sidebar"
-      style={{
-        padding: 20,
-        flexShrink: 0,
-        display: 'flex',
-        flexDirection: 'column',
-        lineHeight: '1.8em',
-        borderRight: '2px solid #eee',
-      }}
-    >
-      {children}
     </div>
   );
 }
@@ -70,3 +53,15 @@ function Logo() {
     </div>
   );
 }
+
+const Sidebar = styled.div`
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8em;
+  border-right: 2px solid #eee;
+
+  color: white;
+
+`;

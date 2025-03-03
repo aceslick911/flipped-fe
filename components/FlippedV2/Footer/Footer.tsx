@@ -1,11 +1,10 @@
 import { styled } from 'styled-components';
-import { Colors } from '#V2/theme';
 
 import './footer.scss';
 
 const Footer = () => {
   return (
-    <FooterWrap className="comp-footer">
+    <FooterWrap className="comp-footer invert">
       <div className="footer-content">
         <div className="minsize-padding"> </div>
         <div className="max-width-wrapper">
@@ -152,6 +151,5 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrap = styled.div`
-  color: ${(props) => Colors.Text};
 
 `;

@@ -1,4 +1,4 @@
-import logoUrl from '#assets/svg/flipped-logo.svg';
+import logoUrl from '/public/favicon.ico';
 
 const gtag = import.meta.env.PUBLIC_ENV__GOOGLE_ANALYTICS;
 export default function HeadDefault() {
