@@ -1,6 +1,6 @@
-import { styled } from 'styled-components';
+import { styled } from 'styled-components'
 
-import './footer.scss';
+import './footer.scss'
 
 const Footer = () => {
   return (
@@ -151,5 +151,5 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrap = styled.div`
-
+    margin-top: -134px;
 `;

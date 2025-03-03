@@ -1,6 +1,6 @@
 {
   /* Set this to true to clean up unused imports but don't commit please */
-  "importSorter.sortConfiguration.removeUnusedImports": true,
+  "importSorter.sortConfiguration.removeUnusedImports": false,
   "importSorter.generalConfiguration.keepUnused": ["type"],
   "importSorter.sortConfiguration.removeUnusedDefaultImports": false, // KEEP THIS FALSE TO PREVENT REMOVING React
 

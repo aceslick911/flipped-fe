@@ -14,8 +14,8 @@ export default function LayoutDefault(props: { children: React.ReactNode }) {
     <div className="root flipbox y x-fill y-fill NW">
       <Header />
       {/* <div className="flipbox y x-fill y-fill N"> */}
-      <FlipBox className="flipbox y x-fill y-fill NW">
-        <TestContents>{children}</TestContents>
+      <FlipBox className="content-box flipbox y x-fill y-fill NW">
+        <TestContents className="pre-footer">{children}</TestContents>
         </FlipBox>
         {/* </div> */}
       <Footer />

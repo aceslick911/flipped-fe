@@ -1,7 +1,8 @@
-import { styled } from 'styled-components';
-import { Colors } from '#V2/theme';
+import { styled } from 'styled-components'
 
-import './header.scss';
+
+
+import './header.scss'
 
 const Header = () => {
   return (
@@ -106,7 +107,5 @@ const Header = () => {
 export default Header;
 
 const HeaderWrap = styled.div`
-background-color: ${(props) => Colors.backgrounds.Flipped_Navy};
-color: ${(props) => Colors.Text};
 
 `;
