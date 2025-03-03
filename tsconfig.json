@@ -12,7 +12,16 @@
     "moduleResolution": "Bundler",
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client", "vike-react"],
+    // "types": ["vite/client", "vike-react"],
+    "typeRoots": [
+      "./components/Helpers/types.d.ts",
+      "./node_modules/@types",
+      "./node_modules/vite/client.d.ts",
+      "./node_modules/vite/types/importMeta.d.ts"
+      // "./node_modules/vite/client.d.ts",
+      // "./node_modules/vike-react/dist/config.d"
+    ],
+
     "jsx": "preserve",
     "jsxImportSource": "react",
 

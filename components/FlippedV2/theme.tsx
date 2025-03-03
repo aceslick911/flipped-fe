@@ -1,4 +1,6 @@
 
+import './fonts.css'
+
 export const Colors = {
   backgrounds: {
 

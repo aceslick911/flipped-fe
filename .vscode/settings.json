@@ -1,11 +1,130 @@
 {
-  "editor.defaultFormatter": "biomejs.biome",
-  "editor.formatOnSave": true,
+  /* Set this to true to clean up unused imports but don't commit please */
+  "importSorter.sortConfiguration.removeUnusedImports": true,
+  "importSorter.generalConfiguration.keepUnused": ["type"],
+  "importSorter.sortConfiguration.removeUnusedDefaultImports": false, // KEEP THIS FALSE TO PREVENT REMOVING React
+
   "editor.codeActionsOnSave": {
+    "source.removeUnusedImports": "never",
+    "source.addMissingImports": "always",
+    "source.organizeImports": "never",
     "source.fixAll.ts": "always",
     "source.fixAll.biome": "always"
   },
+
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.removeUnusedImports": "never",
+      "source.organizeImports": "never"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingImportsByDefault": true,
+    "editor.folding": true,
+    "editor.defaultFoldingRangeProvider": "vscode.typescript-language-features",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never",
+      "source.removeUnusedImports": "never"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingImportsByDefault": true,
+    "editor.folding": true,
+    "editor.formatOnSave": true
+  },
+
+  /* Automatically fix missing imports on save */
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+
+  //https://marketplace.visualstudio.com/items?itemName=mike-co.import-sorter
+  //https://marketplace.visualstudio.com/items?itemName=rmolinamir.import-sorter-redux
+  "importSorter.generalConfiguration.sortImportsInDirectory": false,
+  "importSorter.sortConfiguration.customOrderingRules.defaultNumberOfEmptyLinesAfterGroup": 1,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.importStringConfiguration.trailingComma": "multiLine",
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 100,
+  "importSorter.importStringConfiguration.quoteMark": "single",
+
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+
   "[scss]": {
     "editor.defaultFormatter": "vscode.css-language-features"
+  },
+
+  // Configures ordering of import types
+
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "regex": "^react",
+      "orderLevel": 5
+    },
+    {
+      "regex": "^@?\\w",
+      "orderLevel": 10
+    },
+    {
+      "regex": "^design/",
+      "orderLevel": 20
+    },
+    {
+      "regex": "^@(components|home)/",
+      "orderLevel": 30
+    },
+    {
+      "regex": "^[.]",
+      "orderLevel": 40
+    }
+  ],
+
+  "importSorter.importStringConfiguration.hasSemicolon": false,
+
+  "autoimport.doubleQuotes": false,
+  "autoimport.useSemiColon": false,
+  "autoimport.useTypeScriptAutoImports": false,
+  "autoimport.DoubleQuotes": false,
+  "autoimport.filesToScan": "**/*.{ts,tsx}",
+  "autoimport.showNotifications": true,
+  "autoimport.preferTypeOnlyImports": false,
+  "autoimport.autoComplete": true,
+
+  // Not sure if impacting with .prettierrc
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "newlineBetweenImportsAndCode": 2,
+
+  // Remove or set these to true
+  "typescript.suggestionActions.enabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "typescript.autoImportSuggestions.enabled": true,
+  "javascript.suggest.enabled": true,
+  "typescript.suggest.enabled": true,
+
+  // Enable quick suggestions
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+
+  // Keep these
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+
+  "javascript.suggest.autoImports": true,
+  "typescript.preferences.importModuleSpecifier": "shortest",
+
+  "[javascript]": {
+    "editor.foldingImportsByDefault": true,
+    "editor.folding": true
+  },
+
+  "[javascriptreact]": {
+    "editor.foldingImportsByDefault": true,
+    "editor.folding": true
   }
 }

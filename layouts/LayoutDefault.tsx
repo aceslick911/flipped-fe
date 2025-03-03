@@ -1,27 +1,21 @@
-import './global.scss';
-import '#components/FlippedV2/fonts.css';
+import React from 'react'
 
-import React from 'react';
+import '#components/Flipbox/Flipbox.scss'
+import Footer from '#V2/Footer/Footer'
+import Header from '#V2/Header/Header'
 
-import Header from '#V2/Header/Header';
-import TestContents from './testTemplate/TestTemplate';
-import { styled } from 'styled-components';
-import Footer from '#V2/Footer/Footer';
+import './global.scss'
+import TestContents from './testTemplate/TestTemplate'
 
 export default function LayoutDefault(props: { children: React.ReactNode }) {
   const { children } = props;
   return (
-    <>
+    <div className="root flipbox y x-fill y-fill NW">
       <Header />
-      <PageContents>
+      <div className="flipbox y x-fill y-fill N">
         <TestContents>{children}</TestContents>
-      </PageContents>
+        </div>
       <Footer />
-    </>
+    </div>
   );
 }
-
-const PageContents = styled.div`
-  display: flex;
-  flex-grow: 1;
-  `;

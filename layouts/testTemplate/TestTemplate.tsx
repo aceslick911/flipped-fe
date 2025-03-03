@@ -1,8 +1,9 @@
-import { styled } from 'styled-components';
-import { Link } from '../../components/Link';
-import './TestTemplate.scss';
+import React from 'react'
 
-import React from 'react';
+import { styled } from 'styled-components'
+
+import { Link } from '../../components/Link'
+import './TestTemplate.scss'
 
 function Content({ children }: { children: React.ReactNode }) {
   return <div id="page-content">{children}</div>;

@@ -7,7 +7,6 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      // lint/style/useSelfClosingElements
       "security": {
         "noDangerouslySetInnerHtmlWithChildren": "off"
       },
@@ -17,14 +16,16 @@
           "level": "error",
           "fix": "safe"
         },
-
+        "noUnusedTemplateLiteral": "off",
+        "noUselessElse": "off",
         "noNonNullAssertion": "error",
         "useNamingConvention": {
-          "level": "warn",
-          "options": {
-            "enumMemberCase": "CONSTANT_CASE",
-            "strictCase": false
-          }
+          "level": "off"
+          // "level": "warn",
+          // "options": {
+          //   "enumMemberCase": "CONSTANT_CASE",
+          //   "strictCase": false
+          // }
         },
         "useSelfClosingElements": {
           "level": "error",
@@ -40,8 +41,8 @@
       "correctness": {
         "useExhaustiveDependencies": "off",
         "noUnusedImports": "warn",
-        "noUnusedVariables": "warn",
-        "noInvalidUseBeforeDeclaration": "warn"
+        "noInvalidUseBeforeDeclaration": "warn",
+        "noUnusedVariables": "off"
       }
     }
   },

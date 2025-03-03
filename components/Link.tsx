@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
-import { usePageContext } from 'vike-react/usePageContext';
+import { ReactNode } from 'react'
+
+import { usePageContext } from 'vike-react/usePageContext'
 
 function normalize(url) {
   return `/${url.split('/').filter(Boolean).join('/')}`;
