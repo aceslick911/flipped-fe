@@ -1,9 +1,8 @@
 import vikeReact from 'vike-react/config';
 import type { Config } from 'vike/types';
-import Layout from '../layouts/LayoutDefault.js';
+import Layout from '../layouts/LayoutDefault';
 
-import vikeReactStyledComponents from "vike-react-styled-components/config"
-
+import vikeReactStyledComponents from 'vike-react-styled-components/config';
 
 export default {
   prerender: true,
@@ -11,9 +10,8 @@ export default {
   // https://vike.dev/Layout
   Layout,
 
-  // https://vike.dev/head-tags
-  title: 'My Vike App',
+  title: 'Flipped Energy Australia',
   description: 'Demo showcasing Vike',
 
-  extends: [vikeReact, vikeReactStyledComponents]
+  extends: [vikeReact, vikeReactStyledComponents],
 } satisfies Config;
