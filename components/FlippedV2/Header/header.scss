@@ -1,6 +1,17 @@
 .comp-header,
 .device-desktop {
 
+  background: var(--flipped-navy, #0f1533);
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  // flex-shrink: 0;
+  position: relative;
+
+
   &,
   & * {
     box-sizing: border-box;
@@ -11,16 +22,6 @@
     // flex-basis: 0;
   }
 
-
-  background: var(--flipped-navy, #0f1533);
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: stretch;
-  // flex-shrink: 0;
-  position: relative;
 
 
   .left-pad {

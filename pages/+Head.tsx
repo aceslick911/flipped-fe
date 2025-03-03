@@ -1,7 +1,4 @@
-// https://vike.dev/Head
-
-import React from 'react';
-import logoUrl from '../assets/logo.svg';
+import logoUrl from '#assets/svg/flipped-logo.svg';
 
 const gtag = import.meta.env.PUBLIC_ENV__GOOGLE_ANALYTICS;
 export default function HeadDefault() {

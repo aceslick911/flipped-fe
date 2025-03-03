@@ -22,13 +22,15 @@ export default defineConfig({
   build: {
     target: 'es2022',
   },
-  base: '/flipped-fe/',
+  base: '/flipped-fe',
   resolve: {
     alias: {
       //@ts-ignore
-      '#root': __dirname,
+      // '#root': __dirname,
       //@ts-ignore
       '#V2': path.resolve(__dirname, 'components/FlippedV2'),
+      '#assets': path.resolve(__dirname, 'assets'),
+      '#components': path.resolve(__dirname, 'components'),
     },
   },
 });

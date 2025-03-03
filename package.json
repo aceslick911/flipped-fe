@@ -7,7 +7,9 @@
     "format": "biome format --write ."
   },
   "imports": {
-    "#V2/": "./components/FlippedV2/*.tsx"
+    "#V2/": "./components/FlippedV2/*.tsx",
+    "#assets/": "./assets/*",
+    "#components/": "./components/*"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

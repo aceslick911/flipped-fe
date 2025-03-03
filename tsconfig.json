@@ -18,6 +18,8 @@
 
     "paths": {
       "#V2/*": ["./components/FlippedV2/*"],
+      "#assets/*": ["./assets/*"],
+      "#components/*": ["./components/*"]
     }
   },
   "exclude": ["dist"]

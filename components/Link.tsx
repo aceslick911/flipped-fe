@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 function normalize(url) {
   return `/${url.split('/').filter(Boolean).join('/')}`;
 }
 
-export function Link({ href, children }: { href: string; children: string }) {
+export function Link({ href, children }: { href: string; children?: ReactNode | ReactNode[] }) {
   if (!href.startsWith('/')) throw new Error('Link href should start with /');
   href = normalize(import.meta.env.BASE_URL + href);
 
