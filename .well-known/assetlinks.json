@@ -1,0 +1,29 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "energy.flipped.app",
+      "sha256_cert_fingerprints": [
+        "72:28:49:5D:36:37:D9:30:43:64:5D:32:90:98:47:83:59:A8:BB:98:13:5E:BC:71:86:17:77:F1:17:0F:C6:2B"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "web",
+      "site": "https://flipped.energy"
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "energy.flipped.app",
+      "sha256_cert_fingerprints": [
+        "72:28:49:5D:36:37:D9:30:43:64:5D:32:90:98:47:83:59:A8:BB:98:13:5E:BC:71:86:17:77:F1:17:0F:C6:2B"
+      ]
+    }
+  }
+]
