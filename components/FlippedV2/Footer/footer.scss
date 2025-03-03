@@ -43,7 +43,6 @@
   }
 
   .minsize-padding {
-    // flex-shrink: 0;
     width: 20px;
     height: 438px;
     position: relative;
@@ -70,7 +69,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     align-self: stretch;
-    // flex-shrink: 0;
     position: relative;
   }
 
@@ -118,7 +116,6 @@
     align-items: center;
     justify-content: flex-start;
     align-self: stretch;
-    // flex-shrink: 0;
     position: relative;
   }
 
@@ -168,7 +165,6 @@
   }
 
   .icon3 {
-    // flex-shrink: 0;
     width: 32px;
     height: 32px;
     position: relative;
@@ -181,7 +177,6 @@
     gap: 0px;
     align-items: center;
     justify-content: flex-end;
-    // flex-shrink: 0;
     position: relative;
   }
 
@@ -191,7 +186,6 @@
     gap: 0px;
     align-items: center;
     justify-content: center;
-    // flex-shrink: 0;
     height: auto;
     position: relative;
     overflow: visible;
@@ -247,7 +241,6 @@
     align-items: center;
     justify-content: flex-start;
     align-self: stretch;
-    // flex-shrink: 0;
     height: 438px;
     position: relative;
     overflow: hidden;
@@ -260,7 +253,6 @@
     align-items: flex-end;
     justify-content: center;
     align-self: stretch;
-    // flex-shrink: 0;
     height: 137px;
     position: relative;
   }
@@ -279,20 +271,13 @@
     gap: 0px;
     align-items: flex-start;
     justify-content: flex-start;
-    // flex-shrink: 0;
     width: 1940px;
     height: 141px;
-    position: relative;
-    overflow: hidden;
   }
 
   .svg-curve {
-    // flex-shrink: 0;
     width: 1952.64px;
     height: 169px;
-    position: absolute;
-    left: -6px;
-    top: -0.15px;
     overflow: visible;
   }
 
