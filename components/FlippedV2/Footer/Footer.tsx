@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-import './footer.scss'
+import './Footer.scss'
 
 const Footer = () => {
   return (
@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="minsize-padding"> </div>
         <div className="max-width-wrapper">
           <div className="footer-links">
-            <div className="privacy"> Privacy </div>
-            <div className="all-policies"> All Policies </div>
-            <div className="terms-conditions"> Terms &amp; Conditions </div>
-            <div className="contact"> Contact </div>
+            <div className="privacy">Privacy </div>
+            <div className="all-policies">All Policies </div>
+            <div className="terms-conditions">Terms &amp; Conditions </div>
+            <div className="contact">Contact </div>
           </div>
           <div className="footer-branding">
             <div className="branding-spread">
@@ -100,7 +100,7 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                <div className="_1300-123-456"> 1300 123 456 </div>
+                <div className="_1300-123-456">1300 123 456 </div>
               </div>
               <div className="copyright">
                 <div className="flipped-energy-2024-all-rights-reserved">
@@ -110,7 +110,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="minsize-padding"> </div>
+        <div className="minsize-padding" />
       </div>
       <div className="back-g-dark">
         <div className="footerbackg">
