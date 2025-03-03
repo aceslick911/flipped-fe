@@ -14,7 +14,6 @@ export default function TestContents(props: { children?: React.ReactNode }) {
   return (
     <div id="test-content">
       <Sidebar id="sidebar" className="invert">
-        {/* <Logo /> */}
         <Link href="/">Welcome</Link>
         <Link href="/todo">Todo</Link>
         <Link href="/star-wars">Data Fetching</Link>
