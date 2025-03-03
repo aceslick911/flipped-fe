@@ -36,9 +36,9 @@ body {
   transition: opacity 1s ease-out;
 }
 
-body.page-is-transitioning #page-content {
-  opacity: 0;
-}
+// body.page-is-transitioning #page-content {
+//   opacity: 0;
+// }
 
 
 #root {
