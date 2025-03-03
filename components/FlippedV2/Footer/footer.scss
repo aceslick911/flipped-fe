@@ -26,7 +26,7 @@
     gap: 0px;
     align-items: flex-start;
     justify-content: flex-start;
-    position: relative;
+
   }
 
   .footer-content {
@@ -39,13 +39,13 @@
     align-self: stretch;
     flex-shrink: 0;
     height: 1px;
-    position: relative;
+
   }
 
   .minsize-padding {
     width: 20px;
     height: 438px;
-    position: relative;
+
     overflow: hidden;
   }
 
@@ -58,7 +58,7 @@
     flex: 1;
     height: 438px;
     max-width: 1200px;
-    position: relative;
+
   }
 
   .footer-links {
@@ -69,7 +69,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     align-self: stretch;
-    position: relative;
+
   }
 
   .privacy {
@@ -78,7 +78,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+
   }
 
   .all-policies {
@@ -87,7 +87,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+
   }
 
   .terms-conditions {
@@ -96,7 +96,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+
   }
 
   .contact {
@@ -105,7 +105,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+
   }
 
   .footer-branding {
@@ -116,7 +116,7 @@
     align-items: center;
     justify-content: flex-start;
     align-self: stretch;
-    position: relative;
+
   }
 
   .branding-spread {
@@ -126,14 +126,14 @@
     justify-content: space-between;
     flex: 1;
     max-height: 267px;
-    position: relative;
+
   }
 
   .logos {
     // flex-shrink: 0;
     width: 145px;
     height: 55.86px;
-    position: relative;
+
     overflow: visible;
   }
 
@@ -144,7 +144,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     // flex-shrink: 0;
-    position: relative;
+
     overflow: hidden;
   }
 
@@ -152,7 +152,7 @@
     // flex-shrink: 0;
     width: 32px;
     height: 32px;
-    position: relative;
+
     overflow: visible;
   }
 
@@ -160,14 +160,14 @@
     // flex-shrink: 0;
     width: 32px;
     height: 32px;
-    position: relative;
+
     overflow: visible;
   }
 
   .icon3 {
     width: 32px;
     height: 32px;
-    position: relative;
+
     overflow: visible;
   }
 
@@ -177,7 +177,7 @@
     gap: 0px;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
+
   }
 
   .icon4 {
@@ -187,7 +187,7 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    position: relative;
+
     overflow: visible;
   }
 
@@ -197,7 +197,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    position: relative;
+
   }
 
   .copyright {
@@ -209,7 +209,7 @@
     flex-wrap: wrap;
     align-content: center;
     // flex-shrink: 0;
-    position: relative;
+
   }
 
   .flipped-energy-2024-all-rights-reserved {
@@ -218,7 +218,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
+
   }
 
   .back-g-dark {
@@ -230,7 +230,7 @@
     align-self: stretch;
     // flex-shrink: 0;
     height: 438px;
-    position: relative;
+
     overflow: hidden;
   }
 
@@ -242,7 +242,7 @@
     justify-content: flex-start;
     align-self: stretch;
     height: 438px;
-    position: relative;
+
     overflow: hidden;
   }
 
@@ -254,14 +254,14 @@
     justify-content: center;
     align-self: stretch;
     height: 137px;
-    position: relative;
+
   }
 
   .spacer {
     background: var(--flipped-navy, #0f1533);
     flex: 1;
     height: 4px;
-    position: relative;
+
     overflow: hidden;
   }
 
@@ -285,7 +285,7 @@
     background: var(--flipped-navy, #0f1533);
     flex: 1;
     height: 98.75px;
-    position: relative;
+
     overflow: hidden;
   }
 
@@ -293,6 +293,6 @@
     background: var(--flipped-navy, #0f1533);
     align-self: stretch;
     flex: 1;
-    position: relative;
+
   }
 }

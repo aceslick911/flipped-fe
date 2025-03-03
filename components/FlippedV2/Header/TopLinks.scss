@@ -8,7 +8,7 @@
     overflow: hidden;
     flex-wrap: wrap;
     flex-shrink: 1;
-    // flex-basis: 0;
+
   }
 
 
@@ -19,15 +19,11 @@
   align-items: flex-start;
   justify-content: center;
   align-self: stretch;
-  // flex-shrink: 0;
-  position: relative;
 
 
   .left-pad {
     align-self: stretch;
-    // flex-shrink: 0;
     width: 10px;
-    position: relative;
     overflow: hidden;
   }
 
@@ -43,16 +39,14 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // min-width: 167px;
-    max-width: var(--container-width-max, 1120px);
-    position: relative;
+    // max-width: var(--container-width-max, 1120px);
+
+    min-height: 102px;
   }
 
   .logos {
-    // flex-shrink: 0;
     width: 170px;
     height: 65.49px;
-    position: relative;
     overflow: visible;
   }
 
@@ -65,9 +59,7 @@
     justify-content: flex-start;
     flex-grow: 1;
     flex-shrink: 1;
-
-    // min-width: 132px;
-    position: relative;
+    flex-basis: 0;
     overflow: hidden;
   }
 
@@ -78,8 +70,6 @@
     align-items: flex-start;
     justify-content: flex-end;
     align-self: stretch;
-    // flex-shrink: 0;
-    position: relative;
   }
 
   .v-apart {
@@ -91,8 +81,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    min-height: 102px;
-    position: relative;
+
   }
 
   .phone-account {
@@ -105,9 +94,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     align-self: stretch;
-    // flex-shrink: 0;
-    min-height: 62px;
-    position: relative;
+    // min-height: 62px;
   }
 
   .padded-hover-button {
@@ -118,8 +105,6 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    // flex-shrink: 0;
-    position: relative;
     overflow: hidden;
   }
 
@@ -129,16 +114,12 @@
     gap: 5px;
     align-items: center;
     justify-content: center;
-    // flex-shrink: 0;
-    min-height: 32px;
-    position: relative;
+    // min-height: 32px;
   }
 
   .call-icon {
-    // flex-shrink: 0;
     width: 14px;
     height: 12px;
-    position: relative;
     overflow: visible;
   }
 
@@ -148,7 +129,6 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
   }
 
   .account-links {
@@ -162,9 +142,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // min-width: 79px;
-    max-width: 169px;
-    position: relative;
+    // max-width: 169px;
   }
 
   .top-links {
@@ -176,7 +154,6 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    position: relative;
   }
 
   .padded-hover-button2 {
@@ -187,11 +164,7 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: center;
-    width: 100%;
-    // flex-shrink: 0;
-    // min-width: 117px;
-    max-width: 169px;
-    position: relative;
+    // max-width: 169px;
     overflow: hidden;
   }
 
@@ -206,8 +179,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    max-width: 159px;
-    position: relative;
+    // max-width: 159px;
   }
 
   .login-and-my-account {
@@ -216,17 +188,14 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
   }
 
   .icon {
-    // flex-shrink: 0;
     width: 32px;
     height: 32px;
-    position: relative;
   }
 
   .circle {
@@ -238,9 +207,7 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+
     overflow: visible;
   }
 
@@ -253,10 +220,7 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: flex-end;
-    width: 100%;
-    // flex-shrink: 0;
-    max-width: 859px;
-    position: relative;
+    // max-width: 859px;
     overflow: hidden;
   }
 
@@ -269,8 +233,6 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    // flex-shrink: 0;
-    position: relative;
     overflow: hidden;
   }
 
@@ -281,8 +243,6 @@
     gap: 0px;
     align-items: center;
     justify-content: center;
-    // flex-shrink: 0;
-    position: relative;
   }
 
   .instance-swap {
@@ -292,7 +252,6 @@
     font-size: 16px;
     line-height: 40px;
     font-weight: 400;
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -300,9 +259,7 @@
 
   .right-pad {
     align-self: stretch;
-    // flex-shrink: 0;
     width: 10px;
-    position: relative;
     overflow: hidden;
   }
 

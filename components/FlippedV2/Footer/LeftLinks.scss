@@ -20,14 +20,12 @@
   justify-content: center;
   align-self: stretch;
   // flex-shrink: 0;
-  position: relative;
 
 
   .left-pad {
     align-self: stretch;
     // flex-shrink: 0;
     width: 10px;
-    position: relative;
     overflow: hidden;
   }
 
@@ -45,14 +43,12 @@
 
     // min-width: 167px;
     max-width: var(--container-width-max, 1120px);
-    position: relative;
   }
 
   .logos {
     // flex-shrink: 0;
     width: 170px;
     height: 65.49px;
-    position: relative;
     overflow: visible;
   }
 
@@ -67,7 +63,6 @@
     flex-shrink: 1;
 
     // min-width: 132px;
-    position: relative;
     overflow: hidden;
   }
 
@@ -79,7 +74,6 @@
     justify-content: flex-end;
     align-self: stretch;
     // flex-shrink: 0;
-    position: relative;
   }
 
   .v-apart {
@@ -92,7 +86,6 @@
     flex-shrink: 1;
 
     min-height: 102px;
-    position: relative;
   }
 
   .phone-account {
@@ -107,7 +100,6 @@
     align-self: stretch;
     // flex-shrink: 0;
     min-height: 62px;
-    position: relative;
   }
 
   .padded-hover-button {
@@ -119,7 +111,6 @@
     flex-wrap: wrap;
     align-content: center;
     // flex-shrink: 0;
-    position: relative;
     overflow: hidden;
   }
 
@@ -131,14 +122,12 @@
     justify-content: center;
     // flex-shrink: 0;
     min-height: 32px;
-    position: relative;
   }
 
   .call-icon {
     // flex-shrink: 0;
     width: 14px;
     height: 12px;
-    position: relative;
     overflow: visible;
   }
 
@@ -148,7 +137,6 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
   }
 
   .account-links {
@@ -164,7 +152,6 @@
 
     // min-width: 79px;
     max-width: 169px;
-    position: relative;
   }
 
   .top-links {
@@ -176,7 +163,6 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    position: relative;
   }
 
   .padded-hover-button2 {
@@ -187,11 +173,10 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: center;
-    width: 100%;
+
     // flex-shrink: 0;
     // min-width: 117px;
     max-width: 169px;
-    position: relative;
     overflow: hidden;
   }
 
@@ -207,7 +192,6 @@
     flex-shrink: 1;
 
     max-width: 159px;
-    position: relative;
   }
 
   .login-and-my-account {
@@ -216,7 +200,6 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -226,7 +209,6 @@
     // flex-shrink: 0;
     width: 32px;
     height: 32px;
-    position: relative;
   }
 
   .circle {
@@ -238,9 +220,7 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+
     overflow: visible;
   }
 
@@ -253,10 +233,8 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: flex-end;
-    width: 100%;
-    // flex-shrink: 0;
+
     max-width: 859px;
-    position: relative;
     overflow: hidden;
   }
 
@@ -269,8 +247,6 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    // flex-shrink: 0;
-    position: relative;
     overflow: hidden;
   }
 
@@ -281,8 +257,6 @@
     gap: 0px;
     align-items: center;
     justify-content: center;
-    // flex-shrink: 0;
-    position: relative;
   }
 
   .instance-swap {
@@ -292,7 +266,6 @@
     font-size: 16px;
     line-height: 40px;
     font-weight: 400;
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -302,7 +275,6 @@
     align-self: stretch;
     // flex-shrink: 0;
     width: 10px;
-    position: relative;
     overflow: hidden;
   }
 

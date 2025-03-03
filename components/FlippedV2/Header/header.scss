@@ -8,9 +8,7 @@
   align-items: flex-start;
   justify-content: center;
   align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-
+  flex-basis: auto !important;
 
   &,
   & * {
@@ -18,7 +16,6 @@
     white-space: break-spaces;
     overflow: hidden;
     flex-wrap: wrap;
-    // flex-shrink: 1;
     // flex-basis: 0;
   }
 
@@ -26,10 +23,10 @@
 
   .left-pad {
     align-self: stretch;
-    // flex-shrink: 0;
+
     width: 10px;
-    position: relative;
     overflow: hidden;
+    flex-basis: 0;
   }
 
   .wrap {
@@ -44,21 +41,20 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // min-width: 167px;
     max-width: var(--container-width-max, 1120px);
-    position: relative;
+    flex-basis: 0;
   }
 
   .logos {
-    // flex-shrink: 0;
+
     width: 170px;
     height: 65.49px;
-    position: relative;
     overflow: visible;
+    flex-basis: 0;
   }
 
   .header-links-container {
-    background: var(--background, #0f1533);
+    // background: var(--background, #0f1533);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -67,9 +63,9 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // min-width: 132px;
-    position: relative;
     overflow: hidden;
+    flex-basis: 0;
+    min-width: 100px;
   }
 
   .header-links {
@@ -79,8 +75,8 @@
     align-items: flex-start;
     justify-content: flex-end;
     align-self: stretch;
-    // flex-shrink: 0;
-    position: relative;
+    flex-basis: auto;
+
   }
 
   .v-apart {
@@ -93,7 +89,7 @@
     flex-shrink: 1;
 
     min-height: 102px;
-    position: relative;
+    flex-basis: 0;
   }
 
   .phone-account {
@@ -106,9 +102,9 @@
     flex-wrap: wrap;
     align-content: flex-start;
     align-self: stretch;
-    // flex-shrink: 0;
+
     min-height: 62px;
-    position: relative;
+    flex-basis: 0;
   }
 
   .padded-hover-button {
@@ -119,9 +115,9 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    // flex-shrink: 0;
-    position: relative;
+
     overflow: hidden;
+    flex-basis: 0;
   }
 
   .header-links2 {
@@ -130,17 +126,17 @@
     gap: 5px;
     align-items: center;
     justify-content: center;
-    // flex-shrink: 0;
+
     min-height: 32px;
-    position: relative;
+    flex-basis: 0;
   }
 
   .call-icon {
-    // flex-shrink: 0;
+
     width: 14px;
     height: 12px;
-    position: relative;
     overflow: visible;
+    flex-basis: 0;
   }
 
   .phone-number {
@@ -149,7 +145,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
+    flex-basis: auto;
   }
 
   .account-links {
@@ -163,9 +159,8 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // min-width: 79px;
     max-width: 169px;
-    position: relative;
+    flex-basis: 0;
   }
 
   .top-links {
@@ -176,8 +171,8 @@
     justify-content: flex-start;
     flex-grow: 1;
     flex-shrink: 1;
+    flex-basis: 0;
 
-    position: relative;
   }
 
   .padded-hover-button2 {
@@ -188,12 +183,10 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: center;
-    width: 100%;
-    // flex-shrink: 0;
-    // min-width: 117px;
+
     max-width: 169px;
-    position: relative;
     overflow: hidden;
+    flex-basis: auto;
   }
 
   .header-links3 {
@@ -208,7 +201,7 @@
     flex-shrink: 1;
 
     max-width: 159px;
-    position: relative;
+    flex-basis: 0;
   }
 
   .login-and-my-account {
@@ -217,17 +210,16 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    flex-basis: auto;
   }
 
   .icon {
-    // flex-shrink: 0;
+
     width: 32px;
     height: 32px;
-    position: relative;
   }
 
   .circle {
@@ -239,10 +231,9 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+
     overflow: visible;
+    flex-basis: 0;
   }
 
   .links {
@@ -254,15 +245,14 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: flex-end;
-    width: 100%;
-    // flex-shrink: 0;
+
     max-width: 859px;
-    position: relative;
     overflow: hidden;
+    flex-basis: auto;
   }
 
   .padded-hover-button3 {
-    background: var(--background, #0f1533);
+    // background: var(--background, #0f1533);
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -270,9 +260,9 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    // flex-shrink: 0;
-    position: relative;
+
     overflow: hidden;
+    flex-basis: auto;
   }
 
   .instance-swapper {
@@ -282,8 +272,8 @@
     gap: 0px;
     align-items: center;
     justify-content: center;
-    // flex-shrink: 0;
-    position: relative;
+    flex-basis: auto;
+
   }
 
   .instance-swap {
@@ -293,18 +283,19 @@
     font-size: 16px;
     line-height: 40px;
     font-weight: 400;
-    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+
+    flex-basis: auto;
   }
 
   .right-pad {
     align-self: stretch;
-    // flex-shrink: 0;
+
     width: 10px;
-    position: relative;
     overflow: hidden;
+    flex-basis: 0;
   }
 
 }
