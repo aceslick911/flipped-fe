@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "vike dev",
+    "dev": "VITE_CONFIG=\"{server:{host:true}}\" vike dev",
     "build": "vike build",
     "preview": "vike preview",
     "lint": "biome lint --write .",
