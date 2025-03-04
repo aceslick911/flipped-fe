@@ -1,22 +1,21 @@
-import { styled } from 'styled-components'
+import { styled } from 'styled-components';
 
-import { fwRef } from '#components/Helpers/ReactHelpers'
+import { CN, fwRef } from '#components/Helpers/ReactHelpers';
 
 /**
  * FlipboxDirection - y or x
  */
-type FlipboxDirection = "y" | "x";
+type FlipboxDirection = 'y' | 'x';
 /**
  * FlipboxDirection - y or x
  */
-type FlipboxXFill = "x-fill" | "x-hug" | "x-fixed";
+type FlipboxXFill = 'x-fill' | 'x-hug' | 'x-fixed';
 /**
  * FlipboxDirection - y or x
  */
-type FlipboxYFill = "y-fill" | "y-hug" | "y-fixed";
+type FlipboxYFill = 'y-fill' | 'y-hug' | 'y-fixed';
 
-type FlipboxClassNames =
-  `${FlipboxDirection} ${FlipboxXFill} ${FlipboxYFill} ${CMSAlignCompass}`;
+type FlipboxClassNames = `${FlipboxDirection} ${FlipboxXFill} ${FlipboxYFill} ${CMSAlignCompass}`;
 
 type StyledFlipBoxProps = {
   $style?: string;
@@ -30,22 +29,17 @@ type FlipBoxProps = {
    * @default "y x-fill y-fill NW"
    */
   className: FlipboxClassNames;
-  children:
-    | (string | Date | React.ReactNode)
-    | (string | Date | React.ReactNode)[];
+  children: (string | Date | React.ReactNode) | (string | Date | React.ReactNode)[];
 };
 
 const StyledFlipBox = styled.div<StyledFlipBoxProps>`
-  ${({ $style }) => $style || ""};
+  ${({ $style }) => $style || ''};
 `;
 
 //Add "flipbox" to className
-export const FlipBox = fwRef("FlipBox", (props: FlipBoxProps) => {
+export const FlipBox = fwRef('FlipBox', (props: FlipBoxProps) => {
   return (
-    <StyledFlipBox
-      className={`flipbox ${props.className}`}
-      $style={props.$style}
-    >
+    <StyledFlipBox className={CN('flipbox', props.className, props.name)} $style={props.$style}>
       {props.children as any}
     </StyledFlipBox>
   );
