@@ -3,18 +3,25 @@ import { ReactNode } from 'react'
 import { usePageContext } from 'vike-react/usePageContext'
 
 function normalize(url) {
-  return `/${url.split('/').filter(Boolean).join('/')}`;
+  return `/${url.split("/").filter(Boolean).join("/")}`;
 }
 
-export function Link({ href, children }: { href: string; children?: ReactNode | ReactNode[] }) {
-  if (!href.startsWith('/')) throw new Error('Link href should start with /');
-  href = normalize(import.meta.env.BASE_URL + href);
+export function Link(props: {
+  href: string;
+  children?: ReactNode | ReactNode[];
+}) {
+  const { href, children } = props;
+  if (!href.startsWith("/")) throw new Error("Link href should start with /");
+  const cleanedLinks = normalize(import.meta.env.BASE_URL + href);
 
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
-  const isActive = href === '/' ? urlPathname === href : urlPathname.startsWith(href);
+  const isActive =
+    cleanedLinks === "/"
+      ? urlPathname === cleanedLinks
+      : urlPathname.startsWith(cleanedLinks);
   return (
-    <a href={href} className={isActive ? 'is-active' : undefined}>
+    <a href={cleanedLinks} className={isActive ? "is-active" : undefined}>
       {children}
     </a>
   );
