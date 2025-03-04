@@ -8,8 +8,9 @@ div {
   box-sizing: border-box;
 
   display: flex;
-  white-space: break-spaces;
-  word-break: break-all;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
 }
 
