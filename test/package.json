@@ -1,0 +1,33 @@
+{
+  "name": "flipped-e2e-tests",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "list": "playwright test --list",
+    "test:local": "yarn clean && PLAYWRIGHT_ENV=local playwright test ./tests/flip-origination.spec.ts",
+    "test:dev": "yarn clean && PLAYWRIGHT_ENV=dev playwright test ./tests/flip-origination.spec.ts",
+    "test:uat": "yarn clean && PLAYWRIGHT_ENV=uat playwright test ./tests/flip-origination.spec.ts",
+    "test:staging": "yarn clean && PLAYWRIGHT_ENV=staging playwright test ./tests/flip-origination.spec.ts",
+    "test:prod": "yarn clean && PLAYWRIGHT_ENV=prod playwright test ./tests/flip-origination.spec.ts",
+    "clean": "rm -rf playwright-report",
+    "report": "yarn playwright show-report",
+    "codegen": "node ./codegen.js",
+    "test:quick": "playwright test ./tests/examples/quick.spec.ts $*",
+    "test:x4": "playwright test ./tests/examples/example-xstate.spec.ts $*",
+    "test:x5-t1": "playwright test ./tests/examples/xstate5-pl-search1.spec.ts $*",
+    "test:x5-t2": "playwright test ./tests/examples/xstate5-pl-search1.spec.ts $*",
+    "test": "yarn clean && playwright test ./tests/flip-origination.spec.ts"
+  },
+  "dependencies": {
+    "@xstate/graph": "^3.0.2",
+    "xstate": "^5.19.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}
