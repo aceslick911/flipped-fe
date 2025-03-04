@@ -26,6 +26,7 @@
     "jsxImportSource": "react",
 
     "paths": {
+      "/*": ["./public/*"],
       "#V2/*": ["./components/FlippedV2/*"],
       "#assets/*": ["./assets/*"],
       "#components/*": ["./components/*"]

@@ -731,6 +731,11 @@
     "@types/babel__core" "^7.20.5"
     react-refresh "^0.14.2"
 
+"@xstate/store@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@xstate/store/-/store-3.2.0.tgz#c6b0fcdcb316c2a77da1657db70c901ea5764faa"
+  integrity sha512-qkQhWP5uOBivk1sDy39W9cgX39QRonNKwz/qHT6/Ri57ZX8q7A/Ponu8xA7vMbz8dDiUi7/5tmq3Uc4GHXCkPA==
+
 acorn@^8.0.0:
   version "8.14.0"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.14.0.tgz"

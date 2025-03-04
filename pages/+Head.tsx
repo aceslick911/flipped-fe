@@ -1,4 +1,4 @@
-import logoUrl from '/public/favicon.ico';
+import logoUrl from '/favicon.ico'
 
 const gtag = import.meta.env.PUBLIC_ENV__GOOGLE_ANALYTICS;
 export default function HeadDefault() {
@@ -6,7 +6,10 @@ export default function HeadDefault() {
     <>
       <link rel="icon" href={logoUrl} />
 
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`} />
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`}
+      />
       <script
         // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
         dangerouslySetInnerHTML={{

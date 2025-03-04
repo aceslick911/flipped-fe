@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-export function TodoList({ initialTodoItems }: { initialTodoItems: { text: string }[] }) {
+export function TodoList(props: { initialTodoItems: { text: string }[] }) {
+  const { initialTodoItems } = props;
   const [todoItems, setTodoItems] = useState(initialTodoItems);
   const [newTodo, setNewTodo] = useState("");
   return (
@@ -20,7 +21,11 @@ export function TodoList({ initialTodoItems }: { initialTodoItems: { text: strin
             setTodoItems((prev) => [...prev, { text: newTodo }]);
           }}
         >
-          <input type="text" onChange={(ev) => setNewTodo(ev.target.value)} value={newTodo} />
+          <input
+            type="text"
+            onChange={(ev) => setNewTodo(ev.target.value)}
+            value={newTodo}
+          />
           <button type="submit">Add to-do</button>
         </form>
       </div>
