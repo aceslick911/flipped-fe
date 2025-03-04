@@ -1,17 +1,27 @@
 import { getMovieList } from '../../../database/starWars'
-import { MovieDetails } from '../types'
+import { Movie, MovieDetails } from '../types'
 
 export { onBeforePrerenderStart };
 
-// Run once, provides context object for all pages
+export type IndexData = Movie[];
+export type MovieData = MovieDetails & { url: `/star-wars/${number}` };
+
+// export type PageContextDatas = [IndexData, ...MovieData[]];
+
 async function onBeforePrerenderStart() {
-  const moviesData = await getMovieList();
+  const movieList = await getMovieList();
 
-  const moviePageURLs = moviesData.map((movie) => ({
-    url: "/star-wars/" + movie.id,
-    pageContext: { data: { ...movie } },
-  }));
+  const pageContexts = [
+    // Provide data for /star-wars
+    // {
+    //   url: "/star-wars",
+    //   pageContext: { data: movieList },
+    // },
+    // Provide urls for /star-wars/@id
+    ...movieList.map((movie) => ({
+      url: `/star-wars/${movie.id}`,
+    })),
+  ];
 
-  console.log({ moviePageURLs });
-  return moviePageURLs;
+  return pageContexts;
 }

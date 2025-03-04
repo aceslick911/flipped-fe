@@ -3,17 +3,14 @@ import React from 'react'
 import { useConfig } from 'vike-react/useConfig'
 import { useData } from 'vike-react/useData'
 
-import type { Data } from './+data.js'
+import { FlipBox } from '#components/Flipbox/FlipboxV2'
+
+import type { Data } from './+data'
 
 export default function Page() {
   const movie = useData<Data>();
 
   const config = useConfig();
-
-  config({
-    // Set <title>
-    title: movie.title,
-  });
 
   const {
     release_date,
@@ -34,34 +31,38 @@ export default function Page() {
     url,
   } = movie;
 
+  config({
+    title: title,
+  });
+
   return (
-    <>
-      <h1>{movie.title}</h1>
-      Release Date: {movie.release_date}
+    <FlipBox name="movie-list" className="x x-fill y-hug C">
+      <h1>{title}</h1>
+      Release Date: {release_date}
       <br />
-      Director: {movie.director}
+      Director: {director}x
       <br />
-      Producer: {movie.producer}
+      Producer: {producer}
       <br />
-      Episode ID: {movie.episode_id}
+      Episode ID: {episode_id}
       <br />
-      Opening Crawl: {movie.opening_crawl}
+      Opening Crawl: {opening_crawl}
       <br />
-      Characters: {movie.characters}
+      Characters: {characters}
       <br />
-      Planets: {movie.planets}
+      Planets: {planets}
       <br />
-      Starships: {movie.starships}
+      Starships: {starships}
       <br />
-      Vehicles: {movie.vehicles}
+      Vehicles: {vehicles}
       <br />
-      Species: {movie.species}
+      Species: {species}
       <br />
-      Created: {movie.created}
+      Created: {created}
       <br />
-      Edited: {movie.edited}
+      Edited: {edited}
       <br />
-      URL: {movie.url}
-    </>
+      URL: {url}
+    </FlipBox>
   );
 }

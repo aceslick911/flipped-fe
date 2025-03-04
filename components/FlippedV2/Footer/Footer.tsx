@@ -104,7 +104,7 @@ const Footer = () => {
               </div>
               <div className="copyright">
                 <div className="flipped-energy-2024-all-rights-reserved">
-                  ©Flipped Energy 2024. All rights reserved.{' '}
+                  ©Flipped Energy 2024. All rights reserved.{" "}
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ const Footer = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <title>Footer Curve</title>
-                <g clip-path="url(#clip0_584_8123)">
+                <g clipPath="url(#clip0_584_8123)">
                   <path
                     d="M1952.64 43.5507C1148.9 -66.4276 314.186 60.3529 0 137.49V169.567H1952.64V43.5507Z"
                     fill="#0F1533"
@@ -134,7 +134,12 @@ const Footer = () => {
                 </g>
                 <defs>
                   <clipPath id="clip0_584_8123">
-                    <rect width="1952.64" height="169" fill="white" transform="translate(0 0.567383)" />
+                    <rect
+                      width="1952.64"
+                      height="169"
+                      fill="white"
+                      transform="translate(0 0.567383)"
+                    />
                   </clipPath>
                 </defs>
               </svg>
@@ -151,5 +156,5 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrap = styled.div`
-    margin-top: -134px;
+  margin-top: -134px;
 `;

@@ -2,6 +2,7 @@ export type Movie = {
   id: number;
   title: string;
   release_date: string;
+  url: string;
 };
 
 export type MovieDetails = Movie & {

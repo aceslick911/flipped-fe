@@ -1,13 +1,12 @@
-import React from 'react'
-
 import { useData } from 'vike-react/useData'
 
 import { Link } from '#components/Link'
 
-import type { Data } from './+data.js'
+import { IndexData } from '../@id/+onBeforePrerenderStart'
 
 export default function Page() {
-  const movies = useData<Data>();
+  const movies = useData<IndexData>();
+  console.log("Movies", movies);
   return (
     <>
       <h1>Star Wars Movies</h1>
