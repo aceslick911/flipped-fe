@@ -1,4 +1,4 @@
-/* Remove achor decorations*/
+/* Remove anchor decorations*/
 a {
   text-decoration: none;
 }
@@ -9,6 +9,8 @@ div {
 
   display: flex;
   white-space: break-spaces;
+  word-break: break-all;
+
 }
 
 #sidebar a {

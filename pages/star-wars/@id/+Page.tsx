@@ -36,7 +36,7 @@ export default function Page() {
   });
 
   return (
-    <FlipBox name="movie-list" className="x x-fill y-hug C">
+    <FlipBox name="movie-list" className="y x-fill y-hug C">
       <h1>{title}</h1>
       Release Date: {release_date}
       <br />

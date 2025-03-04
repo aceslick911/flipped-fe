@@ -1,5 +1,7 @@
 import { styled } from 'styled-components'
 
+import { fwRef } from '#components/Helpers/ReactHelpers'
+
 /**
  * FlipboxDirection - y or x
  */
@@ -16,6 +18,10 @@ type FlipboxYFill = "y-fill" | "y-hug" | "y-fixed";
 type FlipboxClassNames =
   `${FlipboxDirection} ${FlipboxXFill} ${FlipboxYFill} ${CMSAlignCompass}`;
 
+type StyledFlipBoxProps = {
+  $style?: string;
+};
+
 type FlipBoxProps = {
   $style?: string;
   name?: string;
@@ -28,6 +34,19 @@ type FlipBoxProps = {
     | (string | Date | React.ReactNode)
     | (string | Date | React.ReactNode)[];
 };
-export const FlipBox = styled.div<FlipBoxProps>`
+
+const StyledFlipBox = styled.div<StyledFlipBoxProps>`
   ${({ $style }) => $style || ""};
 `;
+
+//Add "flipbox" to className
+export const FlipBox = fwRef("FlipBox", (props: FlipBoxProps) => {
+  return (
+    <StyledFlipBox
+      className={`flipbox ${props.className}`}
+      $style={props.$style}
+    >
+      {props.children as any}
+    </StyledFlipBox>
+  );
+});
