@@ -75,7 +75,7 @@ function styledComp(compName: string) {
     fwRef(compName, (props: FlipBoxProps, ref) => {
       const styles = css(strings, ...interpolations);
       return (
-        <FlipBox {...props} ref={ref}>
+        <FlipBox {...props} ref={ref} $style={styles.join('; ') + props.$style}>
           {props.children}
         </FlipBox>
       );

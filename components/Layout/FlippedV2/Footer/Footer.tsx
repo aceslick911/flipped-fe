@@ -1,6 +1,8 @@
-import { styled } from 'styled-components'
+import { styled } from 'styled-components';
 
-import './Footer.scss'
+import './Footer.scss';
+import { HeaderSVG } from '#V2/Header/Header';
+import { PaddedLink } from '#V2/PaddedLink';
 
 const Footer = () => {
   return (
@@ -85,26 +87,13 @@ const Footer = () => {
                 </svg>
               </div>
               <div className="call">
-                <svg
-                  className="icon4"
-                  width="17"
-                  height="12"
-                  viewBox="0 0 17 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>social icon</title>
-
-                  <path
-                    d="M13.9828 9.55148L13.9019 10.2289C13.7392 10.9821 12.6822 11.7353 11.2181 11.9616C9.75389 12.1872 6.82643 11.4348 4.14346 9.28849C1.45869 7.14132 0.361231 4.6571 0.0358586 3.64011C-0.249067 1.56951 1.296 0.289532 1.296 0.289532C1.74361 -0.124921 2.31257 0.0257132 2.84107 0.0257132C3.36958 0.0257132 3.53226 0.440166 3.53226 0.440166C3.53226 0.440166 4.38614 2.17205 4.62972 2.7363C4.8742 3.30139 4.58927 3.64011 4.58927 3.64011C4.58927 3.64011 4.10122 4.2801 3.77584 4.58054C3.45047 4.88097 3.69495 5.29626 3.69495 5.29626C5.60584 8.12003 7.8421 8.87321 8.41105 9.06129C8.98 9.24938 9.18403 8.87321 9.18403 8.87321C9.18403 8.87321 9.75299 8.19493 10.2006 7.74386C10.6482 7.29196 11.0545 7.55495 11.0545 7.55495C11.0545 7.55495 12.844 8.4213 13.4939 8.72257C14.1446 9.02384 13.9819 9.55064 13.9819 9.55064"
-                    fill="white"
-                  />
-                </svg>
-                <div className="_1300-123-456">1300 123 456 </div>
+                <PaddedLink href="tel:1300123456" name="phone-number">
+                  <HeaderSVG image="call" /> 1300 110 100
+                </PaddedLink>
               </div>
               <div className="copyright">
                 <div className="flipped-energy-2024-all-rights-reserved">
-                  ©Flipped Energy 2024. All rights reserved.{" "}
+                  ©Flipped Energy 2024. All rights reserved.{' '}
                 </div>
               </div>
             </div>
@@ -134,12 +123,7 @@ const Footer = () => {
                 </g>
                 <defs>
                   <clipPath id="clip0_584_8123">
-                    <rect
-                      width="1952.64"
-                      height="169"
-                      fill="white"
-                      transform="translate(0 0.567383)"
-                    />
+                    <rect width="1952.64" height="169" fill="white" transform="translate(0 0.567383)" />
                   </clipPath>
                 </defs>
               </svg>

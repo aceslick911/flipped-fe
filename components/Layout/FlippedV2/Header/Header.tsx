@@ -1,5 +1,3 @@
-import { styled } from 'styled-components';
-
 import logoUrl from '#assets/svg/flipped-logo.svg';
 import { Link } from '#components/Link';
 
@@ -127,5 +125,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const HeaderWrap = styled.div``;
