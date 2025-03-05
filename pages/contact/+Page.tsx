@@ -4,10 +4,10 @@ import { useConfig } from 'vike-react/useConfig';
 
 export default function Page() {
   const config = useConfig();
-  config({ title: 'Login' });
+  config({ title: 'Contact Us' });
   return (
     <>
-      <h1>Login</h1>
+      <h1>Contact Us</h1>
     </>
   );
 }
