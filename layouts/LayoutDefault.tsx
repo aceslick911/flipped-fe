@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import '#components/Flipbox/Flipbox.scss';
-import { FlipBox } from '#components/Flipbox/FlipboxV2';
-import Footer from '#components/Layout/FlippedV2/Footer/Footer';
-import Header from '#components/Layout/FlippedV2/Header/Header';
+import '#components/Flipbox/Flipbox.scss'
+import { FlipBox } from '#components/Flipbox/FlipboxV2'
+import Footer from '#components/Layout/FlippedV2/Footer/Footer'
+import Header from '#components/Layout/FlippedV2/Header/Header'
 
-import './global.scss';
-import TestContents from './testTemplate/TestTemplate';
+import './global.scss'
+import TestContents from './testTemplate/TestTemplate'
 
 export default function LayoutDefault(props: { children: React.ReactNode }) {
   const { children } = props;
@@ -14,7 +14,7 @@ export default function LayoutDefault(props: { children: React.ReactNode }) {
     <div className="root flipbox y x-fill y-fill NW">
       <Header />
       <FlipBox name="content-box" className="y x-fill y-fill NW">
-        <TestContents className="pre-footer">{children}</TestContents>
+        {/* <TestContents className="pre-footer">{children}</TestContents> */}
       </FlipBox>
       <Footer />
     </div>
