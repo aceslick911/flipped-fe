@@ -4,7 +4,6 @@ export default function Page() {
   return (
     <>
       <h1>Flipped Energy</h1>
-      This page is:
       <ul>
         <li>Rendered to HTML.</li>
         <li>

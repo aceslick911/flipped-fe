@@ -109,7 +109,7 @@ export const HeaderSVG = (props: { image: SVGImageValue }) => {
 
 const Header = () => {
   return (
-    <div className="comp-header device-desktop">
+    <div className="comp-header device-desktop invert">
       <div className="left-pad" />
       <div className="wrap">
         <Link href="/">

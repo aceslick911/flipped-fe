@@ -52,4 +52,6 @@ const PaddedLinkStyled = styled.FlipBox('PaddedLink')`
   padding: 5px;
   gap: 3px;
 
+  align-items: center;
+
 `;
