@@ -23,6 +23,13 @@ import './TopLinks.scss'
                   </div>
                 </PaddedLink> */
 
+//   <>
+//   Login | My account
+//   <div className="icon">
+//     <HeaderSVG image="personOutline" />
+//   </div>
+// </>
+
 export const TopLinks = () => {
   const [loginModal_open, loginModal_setOpen] = useState(false);
 
@@ -37,12 +44,12 @@ export const TopLinks = () => {
           <div className="account-links">
             <div className="top-links">
               <LoginModalButton>
-                <>
+                <PaddedLink href="/accounts/login" name="login-and-my-account" onClick={() => loginModal_setOpen(true)}>
                   Login | My account
                   <div className="icon">
                     <HeaderSVG image="personOutline" />
                   </div>
-                </>
+                </PaddedLink>
               </LoginModalButton>
             </div>
           </div>
