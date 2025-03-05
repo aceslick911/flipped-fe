@@ -31,7 +31,7 @@ export const PaddedLink = (props: PaddedLinkProps) => {
       <FlipBox
         type="a"
         href={cleanedLinks}
-        name={CN(props.name || 'comp-padded-link', { 'is-active': isActive })}
+        name={CN(props.name, 'comp-padded-link', { 'is-active': isActive })}
         className="x x-hug y-hug C"
         $style={styles}
       >
@@ -43,7 +43,7 @@ export const PaddedLink = (props: PaddedLinkProps) => {
     <FlipBox
       type="a"
       href={props.href}
-      name={props.name || 'comp-padded-link'}
+      name={CN(props.name, 'comp-padded-link')}
       className="x x-hug y-hug C"
       $style={styles}
     >
