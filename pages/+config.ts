@@ -1,8 +1,8 @@
-import vikeReact from 'vike-react/config';
-import type { Config } from 'vike/types';
-import Layout from '../layouts/LayoutDefault';
+import vikeReactStyledComponents from 'vike-react-styled-components/config'
+import vikeReact from 'vike-react/config'
+import type { Config } from 'vike/types'
 
-import vikeReactStyledComponents from 'vike-react-styled-components/config';
+import Layout from '../layouts/LayoutDefault'
 
 export default {
   prerender: true,
@@ -14,4 +14,6 @@ export default {
   description: 'Demo showcasing Vike',
 
   extends: [vikeReact, vikeReactStyledComponents],
+
+bodyHtmlBegin: '<div id="portal"></div>',
 } satisfies Config;

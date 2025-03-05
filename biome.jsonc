@@ -1,8 +1,6 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
-
-  //lint/correctness/noUnusedImports
-
+  // lint/suspicious/noArrayIndexKey
   "organizeImports": {
     "enabled": true
   },
@@ -31,11 +29,13 @@
         }
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        noArrayIndexKey: "off",
       },
       "complexity": {
         "noForEach": "off",
         "noUselessSwitchCase": "off",
+        "noBannedTypes": "off",
         "useLiteralKeys": {
           "level": "error",
           "fix": "safe"

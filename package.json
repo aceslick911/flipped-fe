@@ -9,18 +9,32 @@
   "imports": {
     "#V2/": "./components/Layout/FlippedV2/*.tsx",
     "#assets/": "./assets/*",
-    "#components/": "./components/*"
+    "#components/": "./components/*",
+    "#utils/": "./utils/*",
+    "#root/": "./*"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-visually-hidden": "^1.1.2",
+    "@remixicon/react": "^4.6.0",
+    "@tailwindcss/vite": "^4.0.9",
     "@vitejs/plugin-react": "^4.3.4",
     "@xstate/store": "^3.2.0",
+    "add": "^2.0.6",
+    "autoprefixer": "^10.4.20",
+    "clsx": "^2.1.1",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass-embedded": "^1.85.1",
     "styled-components": "^6.1.15",
+    "tailwind-merge": "^2",
+    "tailwind-variants": "^0.3.1",
     "vike": "^0.4.223",
     "vike-react": "^0.5.13",
-    "vike-react-styled-components": "^1.0.2"
+    "vike-react-styled-components": "^1.0.2",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -28,6 +42,8 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "babel-plugin-styled-components": "^2.1.4",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "5.8",
     "vite": "^6.1.1"
   },
