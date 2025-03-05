@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 
 import { FlipBox } from '#components/Flipbox/FlipboxV2';
-import { Link } from '#components/Link';
+import { CN } from '#components/Helpers/ReactHelpers';
+import { useLink } from '#components/Link';
 
 import './PaddedLink.scss';
 
@@ -23,9 +24,30 @@ export const PaddedLink = (props: PaddedLinkProps) => {
   `,
     [],
   );
+
+  if (isLink) {
+    const { isActive, cleanedLinks } = useLink({ href: props.href });
+    return (
+      <FlipBox
+        type="a"
+        href={cleanedLinks}
+        name={CN(props.name || 'comp-padded-link', { 'is-active': isActive })}
+        className="x x-hug y-hug C"
+        $style={styles}
+      >
+        {children}
+      </FlipBox>
+    );
+  }
   return (
-    <FlipBox name={props.name || 'comp-padded-link'} className="x x-hug y-hug C" $style={styles}>
-      {isLink ? <Link href={props.href}>{children}</Link> : <a href={props.href}>{children}</a>}
+    <FlipBox
+      type="a"
+      href={props.href}
+      name={props.name || 'comp-padded-link'}
+      className="x x-hug y-hug C"
+      $style={styles}
+    >
+      {children}
     </FlipBox>
   );
 };

@@ -1,5 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
+
+  // lint/complexity/useLiteralKeys
+
   "organizeImports": {
     "enabled": true
   },
@@ -21,11 +24,6 @@
         "noNonNullAssertion": "error",
         "useNamingConvention": {
           "level": "off"
-          // "level": "warn",
-          // "options": {
-          //   "enumMemberCase": "CONSTANT_CASE",
-          //   "strictCase": false
-          // }
         },
         "useSelfClosingElements": {
           "level": "error",
@@ -36,7 +34,12 @@
         "noExplicitAny": "off"
       },
       "complexity": {
-        "noForEach": "off"
+        "noForEach": "off",
+        "noUselessSwitchCase": "off",
+        "useLiteralKeys": {
+          "level": "error",
+          "fix": "safe"
+        }
       },
       "correctness": {
         "useExhaustiveDependencies": "off",

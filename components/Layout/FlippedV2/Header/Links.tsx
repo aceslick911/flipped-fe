@@ -1,5 +1,8 @@
-import styled from '#components/Flipbox/FlipboxV2';
-import { PaddedLink } from '#V2/PaddedLink';
+// import styled from '#components/Flipbox/FlipboxV2';
+
+import { styled } from 'styled-components';
+
+import { FlipBox } from '#components/Flipbox/FlipboxV2';
 
 import { HeaderSVG } from './Header';
 import './Links.scss';
@@ -9,9 +12,13 @@ export const TopLinks = () => {
     <div className="header-links">
       <div className="v-apart">
         <div className="phone-account">
-          <PaddedLink href="tel:1300123456">
-            <TopLinkStyle className="x x-hug y-hug C">1300 110 100</TopLinkStyle>
-          </PaddedLink>
+          <Tester type="a" href="" className="x x-hug y-hug NW">
+            1300 110 100
+          </Tester>
+          {/* <PaddedLink href="tel:1300123456" class>
+            1300 110 100
+          </PaddedLink> */}
+          {/* <TopLinkStyle href="tel:1300123456">1300 110 100</TopLinkStyle> */}
           {/* <div className="padded-hover-button"> */}
           {/* <div className="header-links2">
               <HeaderSVG image="call" />
@@ -44,10 +51,14 @@ export const TopLinks = () => {
   );
 };
 
-const TopLinkStyle = styled.FlipBox('TopLinkStyle')`
-  text-align: right;
-  font-family: 'Poppins-Regular', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-
+const Tester = styled(FlipBox)`
+  background-color:red;
 `;
+
+// const TopLinkStyle = styled.FlipBox('TopLinkStyle')`
+//   text-align: right;
+//   font-family: 'Poppins-Regular', sans-serif;
+//   font-size: 12px;
+//   font-weight: 400;
+
+// `;
