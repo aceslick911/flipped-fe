@@ -2,37 +2,16 @@ import React, { useState } from 'react'
 
 import { RiCheckboxCircleFill } from '@remixicon/react'
 
-import Button from '#components/button'
 import styled from '#components/Flipbox/FlipboxV2'
 import { LoginModalButton } from '#components/Modal/Login/LoginModal'
 import Modal from '#components/Modal/modal'
+import Button from '#components/radix/button'
 import { PaddedLink } from '#V2/PaddedLink'
 
 import { HeaderSVG } from './Header'
 import './TopLinks.scss'
 
-/* Login | My account
-        <div className="icon">
-          <HeaderSVG image="personOutline" />
-        </div>
-         */
-/* <PaddedLink href="/accounts/login" name="login-and-my-account" onClick={() => loginModal_setOpen(true)}>
-                  Login | My account
-                  <div className="icon">
-                    <HeaderSVG image="personOutline" />
-                  </div>
-                </PaddedLink> */
-
-//   <>
-//   Login | My account
-//   <div className="icon">
-//     <HeaderSVG image="personOutline" />
-//   </div>
-// </>
-
 export const TopLinks = () => {
-  const [loginModal_open, loginModal_setOpen] = useState(false);
-
   return (
     <div className="header-links">
       <div className="v-apart">
@@ -44,7 +23,7 @@ export const TopLinks = () => {
           <div className="account-links">
             <div className="top-links">
               <LoginModalButton>
-                <PaddedLink href="/accounts/login" name="login-and-my-account" onClick={() => loginModal_setOpen(true)}>
+                <PaddedLink href="/accounts/login" name="login-and-my-account">
                   Login | My account
                   <div className="icon">
                     <HeaderSVG image="personOutline" />

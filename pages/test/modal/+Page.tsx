@@ -5,8 +5,8 @@ import { RiCheckboxCircleFill } from '@remixicon/react'
 import { clientOnly } from 'vike-react/clientOnly'
 import { useConfig } from 'vike-react/useConfig'
 
-import * as Button from '#components/button'
 import * as Modal from '#components/Modal/modal'
+import * as Button from '#components/radix/button'
 
 const Ren = clientOnly(() => import('./mod'));
 

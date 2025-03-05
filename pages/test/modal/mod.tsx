@@ -5,9 +5,9 @@ import { RiCheckboxCircleFill } from '@remixicon/react'
 import { clientOnly } from 'vike-react/clientOnly'
 import { useConfig } from 'vike-react/useConfig'
 
-import Button from '#components/button'
 // import * as Button from '#components/button'
 import Modal from '#components/Modal/modal'
+import Button from '#components/radix/button'
 
 // import * as Modal from '#components/modal'
 
