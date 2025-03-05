@@ -1,12 +1,12 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 
-import { styled } from 'styled-components'
+import { styled } from 'styled-components';
 
-import { CN } from '#components/Helpers/ReactHelpers'
-import { Colors } from '#V2/theme'
+import { CN } from '#components/Helpers/ReactHelpers';
+import { Colors } from '#components/Layout/FlippedV2/theme';
 
-import { Link } from '../../components/Link'
-import './TestTemplate.scss'
+import { Link } from '../../components/Link';
+import './TestTemplate.scss';
 
 function Content(props: {
   children?: ReactNode | ReactNode[];
@@ -27,7 +27,7 @@ export default function TestContents(props: {
   const { children, className } = props;
   return (
     <div id="test-content">
-      <Sidebar id="sidebar" className={CN("invert", className)}>
+      <Sidebar id="sidebar" className={CN('invert', className)}>
         <Link href="/">Welcome</Link>
         <Link href="/todo">Todo</Link>
         <Link href="/star-wars">Data Fetching</Link>

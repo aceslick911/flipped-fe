@@ -25,7 +25,7 @@
 
     "paths": {
       "/*": ["./public/*"],
-      "#V2/*": ["./components/FlippedV2/*"],
+      "#V2/*": ["./components/Layout/FlippedV2/*"],
       "#assets/*": ["./assets/*"],
       "#components/*": ["./components/*"]
     }

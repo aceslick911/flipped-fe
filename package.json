@@ -7,7 +7,7 @@
     "format": "biome format --write ."
   },
   "imports": {
-    "#V2/": "./components/FlippedV2/*.tsx",
+    "#V2/": "./components/Layout/FlippedV2/*.tsx",
     "#assets/": "./assets/*",
     "#components/": "./components/*"
   },
@@ -23,7 +23,7 @@
     "vike-react-styled-components": "^1.0.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.13.8",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",

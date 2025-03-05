@@ -2,8 +2,8 @@ import React from 'react';
 
 import '#components/Flipbox/Flipbox.scss';
 import { FlipBox } from '#components/Flipbox/FlipboxV2';
-import Footer from '#V2/Footer/Footer';
-import Header from '#V2/Header/Header';
+import Footer from '#components/Layout/FlippedV2/Footer/Footer';
+import Header from '#components/Layout/FlippedV2/Header/Header';
 
 import './global.scss';
 import TestContents from './testTemplate/TestTemplate';

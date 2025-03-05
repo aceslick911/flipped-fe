@@ -1,0 +1,19 @@
+.comp-padded-link {
+
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background: #CCEEED22;
+
+    .invert & {
+      color: #28D2CF;
+    }
+  }
+
+  &:active,
+  .active {
+    background: #D9D9D922;
+  }
+
+}

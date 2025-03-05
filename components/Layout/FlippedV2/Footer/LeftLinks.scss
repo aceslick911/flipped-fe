@@ -1,17 +1,6 @@
 .comp-header,
 .device-desktop {
 
-  &,
-  & * {
-    box-sizing: border-box;
-    white-space: break-spaces;
-    overflow: hidden;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-
-  }
-
-
   background: var(--flipped-navy, #0f1533);
   display: flex;
   flex-direction: row;
@@ -19,10 +8,24 @@
   align-items: flex-start;
   justify-content: center;
   align-self: stretch;
+  // flex-shrink: 0;
+
+
+  &,
+  & * {
+    box-sizing: border-box;
+    white-space: break-spaces;
+    overflow: hidden;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    // flex-basis: 0;
+  }
+
 
 
   .left-pad {
     align-self: stretch;
+    // flex-shrink: 0;
     width: 10px;
     overflow: hidden;
   }
@@ -39,12 +42,12 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // max-width: var(--container-width-max, 1120px);
-
-    min-height: 102px;
+    // min-width: 167px;
+    max-width: var(--container-width-max, 1120px);
   }
 
   .logos {
+    // flex-shrink: 0;
     width: 170px;
     height: 65.49px;
     overflow: visible;
@@ -59,7 +62,8 @@
     justify-content: flex-start;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0;
+
+    // min-width: 132px;
     overflow: hidden;
   }
 
@@ -70,6 +74,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     align-self: stretch;
+    // flex-shrink: 0;
   }
 
   .v-apart {
@@ -81,7 +86,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-
+    min-height: 102px;
   }
 
   .phone-account {
@@ -94,7 +99,8 @@
     flex-wrap: wrap;
     align-content: flex-start;
     align-self: stretch;
-    // min-height: 62px;
+    // flex-shrink: 0;
+    min-height: 62px;
   }
 
   .padded-hover-button {
@@ -105,6 +111,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
+    // flex-shrink: 0;
     overflow: hidden;
   }
 
@@ -114,10 +121,12 @@
     gap: 5px;
     align-items: center;
     justify-content: center;
-    // min-height: 32px;
+    // flex-shrink: 0;
+    min-height: 32px;
   }
 
   .call-icon {
+    // flex-shrink: 0;
     width: 14px;
     height: 12px;
     overflow: visible;
@@ -142,7 +151,8 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // max-width: 169px;
+    // min-width: 79px;
+    max-width: 169px;
   }
 
   .top-links {
@@ -164,7 +174,10 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: center;
-    // max-width: 169px;
+
+    // flex-shrink: 0;
+    // min-width: 117px;
+    max-width: 169px;
     overflow: hidden;
   }
 
@@ -179,7 +192,7 @@
     flex-grow: 1;
     flex-shrink: 1;
 
-    // max-width: 159px;
+    max-width: 159px;
   }
 
   .login-and-my-account {
@@ -194,6 +207,7 @@
   }
 
   .icon {
+    // flex-shrink: 0;
     width: 32px;
     height: 32px;
   }
@@ -220,7 +234,8 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: flex-end;
-    // max-width: 859px;
+
+    max-width: 859px;
     overflow: hidden;
   }
 
@@ -259,6 +274,7 @@
 
   .right-pad {
     align-self: stretch;
+    // flex-shrink: 0;
     width: 10px;
     overflow: hidden;
   }

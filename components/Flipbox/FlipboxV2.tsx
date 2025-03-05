@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { css, styled as styledComponents } from 'styled-components';
 
 import { CN, fwRef } from '#components/Helpers/ReactHelpers';
 
@@ -32,7 +32,7 @@ type FlipBoxProps = {
   children: (string | Date | React.ReactNode) | (string | Date | React.ReactNode)[];
 };
 
-const StyledFlipBox = styled.div<StyledFlipBoxProps>`
+const StyledFlipBox = styledComponents.div<StyledFlipBoxProps>`
   ${({ $style }) => $style || ''};
 `;
 
@@ -44,3 +44,36 @@ export const FlipBox = fwRef('FlipBox', (props: FlipBoxProps) => {
     </StyledFlipBox>
   );
 });
+
+function styledComp(compName: string) {
+  return (strings: TemplateStringsArray, ...interpolations: any[]) =>
+    fwRef(compName, (props: FlipBoxProps, ref) => {
+      const styles = css(strings, ...interpolations);
+      return (
+        <FlipBox
+          {...props}
+          //         name={compName}
+          //           $style={
+          //             styles || props.$style
+          //               ? `
+          // flex-wrap: wrap;
+
+          // ${styles};
+          // ${props.$style || ''};
+          // `
+          //               : undefined
+          //           }
+          ref={ref}
+        >
+          {props.children}
+        </FlipBox>
+      );
+    });
+}
+
+const styled = {
+  FlipBox: styledComp,
+  ...styledComponents,
+};
+
+export default styled;
