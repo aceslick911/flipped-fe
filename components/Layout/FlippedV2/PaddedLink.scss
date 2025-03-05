@@ -2,6 +2,12 @@
 
   cursor: pointer;
 
+  &.inline {
+    display: contents !important;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
   &:hover {
     background: #CCEEED22;
 

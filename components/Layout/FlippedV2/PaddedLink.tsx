@@ -5,6 +5,7 @@ import { useLink } from '#components/Link';
 import './PaddedLink.scss';
 
 export type PaddedLinkProps = {
+  className?: string;
   children?: React.ReactNode | React.ReactNode[];
   name?: string;
   $style?: string;
@@ -15,14 +16,28 @@ export type PaddedLinkProps = {
 export const PaddedLink = (props: PaddedLinkProps) => {
   const { children } = props;
   const isLink = props.href.startsWith('/');
+  const isInline = props.className?.includes('inline');
 
   if (isLink) {
     const { isActive, cleanedLinks } = useLink({ href: props.href });
+    if (isInline) {
+      return (
+        <PaddedLinkBase
+          type="a"
+          href={cleanedLinks}
+          name={CN(props.name, 'comp-padded-link', { 'is-active': isActive }, props.className)}
+          className="x x-hug y-hug C"
+          $style={props.$style}
+        >
+          {children}
+        </PaddedLinkBase>
+      );
+    }
     return (
       <PaddedLinkStyled
         type="a"
         href={cleanedLinks}
-        name={CN(props.name, 'comp-padded-link', { 'is-active': isActive })}
+        name={CN(props.name, 'comp-padded-link', { 'is-active': isActive }, props.className)}
         className="x x-hug y-hug C"
         $style={props.$style}
       >
@@ -34,7 +49,7 @@ export const PaddedLink = (props: PaddedLinkProps) => {
     <PaddedLinkStyled
       type="a"
       href={props.href}
-      name={CN(props.name, 'comp-padded-link')}
+      name={CN(props.name, 'comp-padded-link', props.className)}
       className="x x-hug y-hug C"
       $style={props.$style}
     >
@@ -43,7 +58,14 @@ export const PaddedLink = (props: PaddedLinkProps) => {
   );
 };
 
-const PaddedLinkStyled = styled.FlipBox('PaddedLink')`
+const PaddedLinkBase = styled.FlipBox('PaddedLink')`
+
+  padding: 5px;
+  gap: 3px;
+
+`;
+
+const PaddedLinkStyled = styled(PaddedLinkBase)`
   text-align: right;
   font-family: 'Poppins-Regular', sans-serif;
   font-size: 12px;
