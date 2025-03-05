@@ -1,12 +1,11 @@
-import { useData } from 'vike-react/useData'
+import { useData } from 'vike-react/useData';
 
-import { Link } from '#components/Link'
+import { Link } from '#components/Link';
 
-import { IndexData } from '../@id/+onBeforePrerenderStart'
+import { IndexData } from '../@id/+onBeforePrerenderStart';
 
 export default function Page() {
   const movies = useData<IndexData>();
-  console.log("Movies", movies);
   return (
     <>
       <h1>Star Wars Movies</h1>
@@ -18,11 +17,7 @@ export default function Page() {
         ))}
       </ol>
       <p>
-        Source:{" "}
-        <a href="https://brillout.github.io/star-wars">
-          brillout.github.io/star-wars
-        </a>
-        .
+        Source: <a href="https://brillout.github.io/star-wars">brillout.github.io/star-wars</a>.
       </p>
     </>
   );

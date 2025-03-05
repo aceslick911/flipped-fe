@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
 
-  // lint/complexity/useLiteralKeys
+  //lint/correctness/noUnusedImports
 
   "organizeImports": {
     "enabled": true
@@ -43,7 +43,10 @@
       },
       "correctness": {
         "useExhaustiveDependencies": "off",
-        "noUnusedImports": "warn",
+        "noUnusedImports": {
+          "level": "off",
+          "fix": "unsafe"
+        },
         "noInvalidUseBeforeDeclaration": "warn",
         "noUnusedVariables": "off"
       }
