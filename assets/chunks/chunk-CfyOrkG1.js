@@ -1,0 +1,1 @@
+import{u as i,e as a}from"./chunk-9E1JqLqJ.js";import{g as r}from"./chunk-B9D2Y4am.js";function u(){let e=r();return e?o=>t(o,e):(e=i(),o=>{"_headAlreadySet"in e?s(o):t(o,e)})}function t(e,o){o._configFromHook??(o._configFromHook={}),Object.assign(o._configFromHook,e)}function s(e){const{title:o,lang:n}=e;a(o,n)}export{u};
