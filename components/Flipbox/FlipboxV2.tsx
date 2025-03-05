@@ -1,8 +1,8 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react'
 
-import { css, styled as styledComponents } from 'styled-components';
+import { css, styled as styledComponents } from 'styled-components'
 
-import { CN, fwRef } from '#components/Helpers/ReactHelpers';
+import { CN, fwRef } from '#components/Helpers/ReactHelpers'
 
 /**
  * FlipboxDirection - y or x
@@ -31,40 +31,74 @@ type BaseFlipBoxProps = {
    * @default "div"
    * @example "a"
    */
-  type?: 'div' | 'a';
+  type?: 'div' | 'a' | 'button';
 
   /**
    * className
    * @default "y x-fill y-fill NW"
    */
   className: FlipboxClassNames;
+};
+
+type FlipBoxMultiChildren = BaseFlipBoxProps & {
   children: (string | Date | React.ReactNode) | (string | Date | React.ReactNode)[];
 };
 
+type FlipBoxSingleChild = BaseFlipBoxProps & {
+  children: string | Date | React.ReactNode;
+};
+
 type FlipBoxProps =
-  | (BaseFlipBoxProps &
+  | (FlipBoxMultiChildren &
       HTMLAttributes<HTMLAnchorElement> & {
         type: 'a';
         href: string;
       })
-  | (BaseFlipBoxProps &
+  | (FlipBoxMultiChildren &
       HTMLAttributes<HTMLDivElement> & {
         type?: 'div';
+      })
+  | (FlipBoxSingleChild &
+      HTMLAttributes<HTMLButtonElement> & {
+        type: 'button';
       });
 
-export const FlipBox = fwRef('FlipBox', (props: FlipBoxProps) => {
-  switch (props.type) {
+export const FlipBox = fwRef('FlipBox', (_props: FlipBoxProps) => {
+  const { type, children, className, name, $style, ...flipBoxProps } = _props;
+  switch (type) {
     case 'a':
       return (
-        <StyledFlipBoxAnchor {...props} className={CN('flipbox', props.className, props.name)} $style={props.$style}>
-          {props.children as any}
+        <StyledFlipBoxAnchor
+          {...(flipBoxProps as any)}
+          name={name}
+          className={CN('flipbox', className, name)}
+          $style={$style}
+        >
+          {children as any}
         </StyledFlipBoxAnchor>
       );
+    case 'button':
+      return (
+        <StyledFlipBoxButton
+          {...(flipBoxProps as any)}
+          name={name}
+          className={CN('flipbox', className, name)}
+          $style={$style}
+        >
+          {children as any}
+        </StyledFlipBoxButton>
+      );
+
     case 'div':
     default:
       return (
-        <StyledFlipBoxDiv {...props} className={CN('flipbox', props.className, props.name)} $style={props.$style}>
-          {props.children as any}
+        <StyledFlipBoxDiv
+          {...(flipBoxProps as any)}
+          name={name}
+          className={CN('flipbox', className, name)}
+          $style={$style}
+        >
+          {children as any}
         </StyledFlipBoxDiv>
       );
   }
@@ -72,11 +106,12 @@ export const FlipBox = fwRef('FlipBox', (props: FlipBoxProps) => {
 
 function styledComp(compName: string) {
   return (strings: TemplateStringsArray, ...interpolations: any[]) =>
-    fwRef(compName, (props: FlipBoxProps, ref) => {
+    fwRef(compName, (_props: FlipBoxProps, ref) => {
+      const { children, $style, type, ...rest } = _props;
       const styles = css(strings, ...interpolations);
       return (
-        <FlipBox {...props} ref={ref} $style={styles.join('; ') + props.$style}>
-          {props.children}
+        <FlipBox type={type} {...(rest as any)} ref={ref} $style={styles.join('; ') + $style}>
+          {children}
         </FlipBox>
       );
     });
@@ -96,6 +131,12 @@ const StyledFlipBoxDiv = styledComponents.div<StyledFlipBoxProps>`
 `;
 
 const StyledFlipBoxAnchor = styledComponents.a<StyledFlipBoxProps>`
+  display: flex;
+  color: inherit;
+  ${({ $style }) => $style || ''};
+`;
+
+const StyledFlipBoxButton = styledComponents.button<StyledFlipBoxProps>`
   display: flex;
   color: inherit;
   ${({ $style }) => $style || ''};

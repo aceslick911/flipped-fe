@@ -6,9 +6,9 @@ import { clientOnly } from 'vike-react/clientOnly'
 import { useConfig } from 'vike-react/useConfig'
 
 import * as Button from '#components/button'
-import * as Modal from '#components/modal'
+import * as Modal from '#components/Modal/modal'
 
-const Ren = clientOnly(()=> import('./mod'));
+const Ren = clientOnly(() => import('./mod'));
 
 export default function Page(pageContext: any) {
   const config = useConfig();
@@ -16,10 +16,5 @@ export default function Page(pageContext: any) {
 
   const content = pageContext;
 
-
-
-  return (
-    
-  <Ren fallback={<div>LOADING</div>} />
-  );
+  return <Ren fallback={<div>LOADING</div>} />;
 }

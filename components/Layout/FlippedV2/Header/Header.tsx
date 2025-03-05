@@ -1,8 +1,8 @@
-import logoUrl from '#assets/svg/flipped-logo.svg';
-import { Link } from '#components/Link';
+import logoUrl from '#assets/svg/flipped-logo.svg'
+import { Link } from '#components/Link'
 
-import './Header.scss';
-import { TopLinks } from './Links';
+import './Header.scss'
+import { TopLinks } from './TopLinks'
 
 enum SVGImage {
   call = 'Call Icon',

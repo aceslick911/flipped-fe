@@ -1,20 +1,61 @@
-import styled from '#components/Flipbox/FlipboxV2';
-import { CN } from '#components/Helpers/ReactHelpers';
-import { useLink } from '#components/Link';
+import styled, { FlipBox } from '#components/Flipbox/FlipboxV2'
+import { CN } from '#components/Helpers/ReactHelpers'
+import { useLink } from '#components/Link'
 
-import './PaddedLink.scss';
+import './PaddedLink.scss'
 
-export type PaddedLinkProps = {
+type PaddedLinkPropsBase = {
   className?: string;
-  children?: React.ReactNode | React.ReactNode[];
   name?: string;
   $style?: string;
-
-  href: string;
 };
+
+type PaddedLinkMultiChildren = PaddedLinkPropsBase & {
+  children:
+    | (
+        | string
+        // Date |
+        | React.ReactNode
+      )
+    | (
+        | string
+        // Date |
+        | React.ReactNode
+      )[];
+};
+
+type PaddedLinkSingleChild = PaddedLinkPropsBase & {
+  children:
+    | string
+    //Date |
+    | React.ReactNode;
+};
+
+export type PaddedLinkProps =
+  | (PaddedLinkMultiChildren & {
+      href: string;
+    })
+  | (PaddedLinkSingleChild & {
+      onClick: () => void;
+    });
 
 export const PaddedLink = (props: PaddedLinkProps) => {
   const { children } = props;
+
+  if ('onClick' in props) {
+    return (
+      <PaddedLinkStyled
+        type="button"
+        name={CN(props.name, 'comp-padded-link', props.className)}
+        className="x x-hug y-hug C"
+        onClick={props.onClick}
+        $style={props.$style}
+      >
+        {children}
+      </PaddedLinkStyled>
+    );
+  }
+
   const isLink = props.href.startsWith('/');
   const isInline = props.className?.includes('inline');
 
@@ -58,7 +99,8 @@ export const PaddedLink = (props: PaddedLinkProps) => {
   );
 };
 
-const PaddedLinkBase = styled.FlipBox('PaddedLink')`
+// const PaddedLinkBase = styled.FlipBox('PaddedLink')`
+const PaddedLinkBase = styled(FlipBox)`
 
   padding: 5px;
   gap: 3px;

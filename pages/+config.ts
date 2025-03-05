@@ -16,5 +16,5 @@ export default {
   extends: [vikeReact, vikeReactStyledComponents],
 
   //bodyHtmlBegin:
-  bodyHtmlEnd: '<div id="portal"></div>',
+  // bodyHtmlEnd: '<div id="portal"></div>',
 } satisfies Config;

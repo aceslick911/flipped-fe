@@ -39,48 +39,39 @@ const ModalContent = React.forwardRef<
     overlayClassName?: string;
     showClose?: boolean;
   }
->(
-  (
-    { className, overlayClassName, children, showClose = true, ...rest },
-    forwardedRef,
-  ) => {
-    return (
-      <ModalPortal>
-        <ModalOverlay className={overlayClassName}>
-          <DialogPrimitive.Content
-            ref={forwardedRef}
-            className={cn(
-              // base
-              'relative w-full max-w-[400px]',
-              'rounded-20 bg-bg-white-0 shadow-regular-md',
-              // focus
-              'focus:outline-none',
-              // animation
-              'data-[state=open]:animate-in data-[state=closed]:animate-out',
-              'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
-              'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
-              className,
-            )}
-            {...rest}
-          >
-            {children}
-            {showClose && (
-              <ModalClose asChild>
-                <CompactButton.Root
-                  variant='ghost'
-                  size='large'
-                  className='absolute right-4 top-4'
-                >
-                  <CompactButton.Icon as={RiCloseLine} />
-                </CompactButton.Root>
-              </ModalClose>
-            )}
-          </DialogPrimitive.Content>
-        </ModalOverlay>
-      </ModalPortal>
-    );
-  },
-);
+>(({ className, overlayClassName, children, showClose = true, ...rest }, forwardedRef) => {
+  return (
+    <ModalPortal>
+      <ModalOverlay className={overlayClassName}>
+        <DialogPrimitive.Content
+          ref={forwardedRef}
+          className={cn(
+            // base
+            'relative w-full max-w-[400px]',
+            'rounded-20 bg-bg-white-0 shadow-regular-md',
+            // focus
+            'focus:outline-none',
+            // animation
+            'data-[state=open]:animate-in data-[state=closed]:animate-out',
+            'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+            'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
+            className,
+          )}
+          {...rest}
+        >
+          {children}
+          {showClose && (
+            <ModalClose asChild>
+              <CompactButton.Root variant="ghost" size="large" className="absolute right-4 top-4">
+                <CompactButton.Icon as={RiCloseLine} />
+              </CompactButton.Root>
+            </ModalClose>
+          )}
+        </DialogPrimitive.Content>
+      </ModalOverlay>
+    </ModalPortal>
+  );
+});
 ModalContent.displayName = 'ModalContent';
 
 function ModalHeader({
@@ -106,16 +97,14 @@ function ModalHeader({
       {children || (
         <>
           {Icon && (
-            <div className='flex size-10 shrink-0 items-center justify-center rounded-full bg-bg-white-0 ring-1 ring-inset ring-stroke-soft-200'>
-              <Icon className='size-5 text-text-sub-600' />
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-bg-white-0 ring-1 ring-inset ring-stroke-soft-200">
+              <Icon className="size-5 text-text-sub-600" />
             </div>
           )}
           {(title || description) && (
-            <div className='flex-1 space-y-1'>
+            <div className="flex-1 space-y-1">
               {title && <ModalTitle>{title}</ModalTitle>}
-              {description && (
-                <ModalDescription>{description}</ModalDescription>
-              )}
+              {description && <ModalDescription>{description}</ModalDescription>}
             </div>
           )}
         </>
@@ -153,24 +142,15 @@ const ModalDescription = React.forwardRef<
 });
 ModalDescription.displayName = 'ModalDescription';
 
-function ModalBody({
-  className,
-  ...rest
-}: React.HTMLAttributes<HTMLDivElement>) {
+function ModalBody({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return <div className={cn('p-5', className)} {...rest} />;
 }
 ModalBody.displayName = 'ModalBody';
 
-function ModalFooter({
-  className,
-  ...rest
-}: React.HTMLAttributes<HTMLDivElement>) {
+function ModalFooter({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn(
-        'flex items-center justify-between gap-3 border-t border-stroke-soft-200 px-5 py-4',
-        className,
-      )}
+      className={cn('flex items-center justify-between gap-3 border-t border-stroke-soft-200 px-5 py-4', className)}
       {...rest}
     />
   );
@@ -178,16 +158,31 @@ function ModalFooter({
 
 ModalFooter.displayName = 'ModalFooter';
 
-export {
-  ModalRoot as Root,
-  ModalTrigger as Trigger,
-  ModalClose as Close,
-  ModalPortal as Portal,
-  ModalOverlay as Overlay,
-  ModalContent as Content,
-  ModalHeader as Header,
-  ModalTitle as Title,
-  ModalDescription as Description,
-  ModalBody as Body,
-  ModalFooter as Footer,
+// export {
+//   ModalRoot as Root,
+//   ModalTrigger as Trigger,
+//   ModalClose as Close,
+//   ModalPortal as Portal,
+//   ModalOverlay as Overlay,
+//   ModalContent as Content,
+//   ModalHeader as Header,
+//   ModalTitle as Title,
+//   ModalDescription as Description,
+//   ModalBody as Body,
+//   ModalFooter as Footer,
+// };
+
+export const Modal = {
+  Root: ModalRoot,
+  Trigger: ModalTrigger,
+  Close: ModalClose,
+  Portal: ModalPortal,
+  Overlay: ModalOverlay,
+  Content: ModalContent,
+  Header: ModalHeader,
+  Title: ModalTitle,
+  Description: ModalDescription,
+  Body: ModalBody,
+  Footer: ModalFooter,
 };
+export default Modal;
