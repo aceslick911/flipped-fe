@@ -1,3 +1,4 @@
+import styled from '#components/Flipbox/FlipboxV2';
 import { PaddedLink } from '#V2/PaddedLink';
 
 import { HeaderSVG } from './Header';
@@ -17,20 +18,31 @@ export const TopLinks = () => {
               <PaddedLink href="/accounts/login" name="login-and-my-account">
                 Login | My account
                 <div className="icon">
-                  <HeaderSVG image="personFilled" />
+                  <HeaderSVG image="personOutline" />
                 </div>
               </PaddedLink>
             </div>
           </div>
         </div>
         <div className="links">
-          <div className="padded-hover-button3">
-            <div className="instance-swapper">
-              <div className="instance-swap"> Contact Us </div>
-            </div>
-          </div>
+          <BottomLink href="/contact" name="contact">
+            Contact Us
+          </BottomLink>
         </div>
       </div>
     </div>
   );
 };
+
+const BottomLink = styled(PaddedLink)`
+      background: var(--background, #0f1533);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: hidden;
+    
+`;

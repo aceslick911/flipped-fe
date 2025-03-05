@@ -82,10 +82,12 @@ function styledComp(compName: string) {
     });
 }
 
-export const styled = {
-  FlipBox: styledComp,
-  ...styledComponents,
-};
+// export const styled = {
+//   FlipBox: styledComp,
+//   ...styledComponents,
+// };
+export const styled = styledComponents as typeof styledComponents & { FlipBox: typeof styledComp };
+styled.FlipBox = styledComp;
 
 export default styled;
 

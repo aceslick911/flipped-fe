@@ -33,11 +33,12 @@
   }
 
   .wrap {
+    align-items: stretch;
     display: flex;
     flex-direction: row;
     gap: 0px;
     row-gap: 10px;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
@@ -57,11 +58,17 @@
   }
 
   .header-links-container {
-    display: flex;
-    flex-direction: column;
+
+    flex-direction: row;
     gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    display: flex;
+    // flex-direction: column;
+    // gap: 10px;
+    // align-items: flex-start;
+    // justify-content: flex-start;
     flex-grow: 1;
     flex-shrink: 1;
 
