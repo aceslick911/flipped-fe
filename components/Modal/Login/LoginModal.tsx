@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { GrSecure } from 'react-icons/gr';
 
-import { RiEyeLine, RiEyeOffLine, RiInformationFill, RiLock2Line, RiMailLine } from '@remixicon/react';
+import { RiEyeLine, RiEyeOffLine, RiInformationFill, RiLock2Line, RiMailLine, RiQuestionFill } from '@remixicon/react';
 
 import { FlipBox } from '#components/Flipbox/FlipboxV2';
 import { SVGs } from '#components/Layout/SVG/SVGs';
+import { Link } from '#components/Link';
 import Button from '#components/radix/button';
 import Hint from '#components/radix/hint';
 import Input from '#components/radix/input';
@@ -45,11 +46,12 @@ function UsernameInput() {
             <Input.Input id="email" type="email" placeholder="my@email.com" />
           </Input.Wrapper>
         </Input.Root>
-
-        <Hint.Root>
-          <Hint.Icon as={RiInformationFill} />
-          This is the e-mail address you signed up with.
-        </Hint.Root>
+        <div className="flex flex-col items-center gap-2">
+          <Hint.Root className="flex-grow basis-0">
+            <Hint.Icon as={RiQuestionFill} className="text-warning-base" />
+            <Link href="/forgot-password">Forgot email?</Link>
+          </Hint.Root>
+        </div>
       </div>
     </div>
   );
@@ -80,9 +82,9 @@ function PasswordInput() {
           </Input.Wrapper>
         </Input.Root>
 
-        <Hint.Root>
-          <Hint.Icon as={RiInformationFill} />
-          This is a hint text to help user.
+        <Hint.Root className="flex flex-row justify-center gap-2">
+          <Hint.Icon as={RiQuestionFill} className="text-warning-base" />
+          <Link href="/forgot-password">Forgot the password?</Link>
         </Hint.Root>
       </div>
     </div>
@@ -91,7 +93,12 @@ function PasswordInput() {
 
 const LoginForm = (props: ILoginFormProps) => {
   return (
-    <FlipBox name="login-form" className="y x-hug y-hug C" $style="gap: 20px;">
+    <FlipBox
+      name="login-form"
+      className="y x-hug y-hug C"
+      class={['flex-wrap', 'justify-center', 'items-center']}
+      $style="gap: 20px;"
+    >
       <UsernameInput />
       <PasswordInput />
     </FlipBox>
@@ -104,7 +111,7 @@ const LoginPage = () => {
       <div className="rounded-10 bg-success-lighter flex size-10 shrink-0 items-center justify-center">
         <GrSecure className="text-success-base size-6" />
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-stretch justify-stretch flex-wrap">
         <div className="space-y-3 flex flex-col items-center justify-center mb-8">
           <SVGs image="flippedLogo_invert" />
           <div className="text-label-md text-text-strong-950 mb-8">Login to My Account</div>
@@ -131,7 +138,7 @@ export const LoginModalButton = (props: LoginModalButtonProps) => {
       <Modal.Portal>
         <Modal.Overlay className="DialogOverlay">
           <Modal.Content className="max-w-[440px]">
-            <Modal.Body className="flex flex-col items-start gap-4">
+            <Modal.Body className="flex flex-col items-stretch gap-4">
               <LoginPage />
             </Modal.Body>
             <Modal.Footer>

@@ -1,9 +1,5 @@
-
-import './fonts.css'
-
 export const Colors = {
   backgrounds: {
-
     Flipped_Navy: '#0F1533',
 
     Flipped_Aqua: '#28D2CF',
@@ -19,18 +15,15 @@ export const Colors = {
     Flipped_Green: '#003300',
   },
 
-
   Flipped_Line: '#25D3CE',
 
   Flipped_Glow: '#00FFF2FF',
 
   Flipped_Glow_Off: '#00FFF200',
 
-
   Text: '#0F1533',
 
   TextInverse: '#FFFFFF',
-
 
   TextDisabled: '#888888',
 
@@ -47,4 +40,4 @@ export const Colors = {
     col10Purple: 'purple',
     col11Pink: 'pink',
   },
-} as const
+} as const;

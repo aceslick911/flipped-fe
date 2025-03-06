@@ -97,7 +97,7 @@ function ModalHeader({
       {children || (
         <>
           {Icon && (
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-bg-white-0 ring-1 ring-inset ring-stroke-soft-200">
+            <div className="flex size-10 shrink-0 items-center justify-center align-stretch content-stretch flex-wrap rounded-full bg-bg-white-0 ring-1 ring-inset ring-stroke-soft-200">
               <Icon className="size-5 text-text-sub-600" />
             </div>
           )}
@@ -143,7 +143,7 @@ const ModalDescription = React.forwardRef<
 ModalDescription.displayName = 'ModalDescription';
 
 function ModalBody({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('p-5', className)} {...rest} />;
+  return <div className={cn('p-5', 'flex-wrap', 'items-stretch', 'content-stretch', className)} {...rest} />;
 }
 ModalBody.displayName = 'ModalBody';
 

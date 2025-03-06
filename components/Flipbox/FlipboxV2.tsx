@@ -1,8 +1,9 @@
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react';
 
-import { css, styled as styledComponents } from 'styled-components'
+import { css, styled as styledComponents } from 'styled-components';
+import { twMerge } from 'tailwind-merge';
 
-import { CN, fwRef } from '#components/Helpers/ReactHelpers'
+import { CN, fwRef } from '#components/Helpers/ReactHelpers';
 
 /**
  * FlipboxDirection - y or x
@@ -17,6 +18,21 @@ type FlipboxXFill = 'x-hug' | 'x-fill' | 'x-fixed';
  */
 type FlipboxYFill = 'y-hug' | 'y-fill' | 'y-fixed';
 
+// type TWFlexWrap = 'flex-wrap' | 'flex-nowrap' | 'flex-wrap-reverse';
+// type TWJustify =
+//   | 'justify-start'
+//   | 'justify-end'
+//   | 'justify-center'
+//   | 'justify-between'
+//   | 'justify-around'
+//   | 'justify-evenly'
+//   | 'justify-stretch'
+//   | 'justify-baseline'
+//   | 'justify-normal';
+// type TWAlign = 'items-start' | 'items-end' | 'items-center' | 'items-baseline' | 'items-stretch';
+
+// type TailwindClasses = `${' ' | ''}${TWFlexWrap}${' ' | ''}${TWJustify}${' ' | ''}${TWAlign}`;
+type TailwindClasses = Parameters<typeof twMerge>;
 type FlipboxClassNames = `${FlipboxDirection} ${FlipboxXFill} ${FlipboxYFill} ${CMSAlignCompass}`;
 
 type StyledFlipBoxProps = {
@@ -38,6 +54,8 @@ type BaseFlipBoxProps = {
    * @default "y x-fill y-fill NW"
    */
   className: FlipboxClassNames;
+
+  class?: TailwindClasses;
 };
 
 type FlipBoxMultiChildren = BaseFlipBoxProps & {
@@ -64,14 +82,17 @@ type FlipBoxProps =
       });
 
 export const FlipBox = fwRef('FlipBox', (_props: FlipBoxProps) => {
-  const { type = 'div', children, className, name, $style, ...flipBoxProps } = _props;
+  const { type = 'div', children, className, name, $style, class: tailwindClasses, ...flipBoxProps } = _props;
+
+  const twClasses = tailwindClasses ? twMerge(tailwindClasses) : '';
+
   switch (type) {
     case 'a':
       return (
         <StyledFlipBoxAnchor
           {...(flipBoxProps as any)}
           name={name}
-          className={CN('flipbox', className, name)}
+          className={CN('flipbox', className, twClasses, name)}
           $style={$style}
         >
           {children as any}
@@ -82,7 +103,7 @@ export const FlipBox = fwRef('FlipBox', (_props: FlipBoxProps) => {
         <StyledFlipBoxButton
           {...(flipBoxProps as any)}
           name={name}
-          className={CN('flipbox', className, name)}
+          className={CN('flipbox', className, twClasses, name)}
           $style={$style}
         >
           {children as any}
@@ -95,7 +116,7 @@ export const FlipBox = fwRef('FlipBox', (_props: FlipBoxProps) => {
         <StyledFlipBoxDiv
           {...(flipBoxProps as any)}
           name={name}
-          className={CN('flipbox', className, name)}
+          className={CN('flipbox', className, twClasses, name)}
           $style={$style}
         >
           {children as any}
