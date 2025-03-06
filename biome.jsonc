@@ -1,5 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
+  // br is a void element tag and must not have children.biomelint/correctness/noVoidElementsWithChildren
+
   "organizeImports": {
     "enabled": true
   },
@@ -51,7 +53,8 @@
           "fix": "unsafe"
         },
         "noInvalidUseBeforeDeclaration": "warn",
-        "noUnusedVariables": "off"
+        "noUnusedVariables": "off",
+        "noVoidElementsWithChildren": "off"
       }
     }
   },

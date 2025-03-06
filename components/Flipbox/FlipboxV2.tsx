@@ -45,7 +45,7 @@ type FlipBoxMultiChildren = BaseFlipBoxProps & {
 };
 
 type FlipBoxSingleChild = BaseFlipBoxProps & {
-  children: string | Date | React.ReactNode;
+  children?: string | Date | React.ReactNode;
 };
 
 type FlipBoxProps =
@@ -60,11 +60,11 @@ type FlipBoxProps =
       })
   | (FlipBoxSingleChild &
       HTMLAttributes<HTMLButtonElement> & {
-        type: 'button';
+        type?: 'button';
       });
 
 export const FlipBox = fwRef('FlipBox', (_props: FlipBoxProps) => {
-  const { type, children, className, name, $style, ...flipBoxProps } = _props;
+  const { type = 'div', children, className, name, $style, ...flipBoxProps } = _props;
   switch (type) {
     case 'a':
       return (

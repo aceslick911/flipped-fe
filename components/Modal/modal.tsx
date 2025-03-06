@@ -1,12 +1,12 @@
 // AlignUI Modal v0.0.0
 
-import * as React from 'react'
+import * as React from 'react';
 
-import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { RemixiconComponentType, RiCloseLine } from '@remixicon/react'
+import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { RemixiconComponentType, RiCloseLine } from '@remixicon/react';
 
-import * as CompactButton from '#components/radix/compact-button'
-import { cn } from '#utils/cn'
+import * as CompactButton from '#components/radix/compact-button';
+import { cn } from '#utils/cn';
 
 const ModalRoot = DialogPrimitive.Root;
 const ModalTrigger = DialogPrimitive.Trigger;
@@ -22,7 +22,7 @@ const ModalOverlay = React.forwardRef<
       ref={forwardedRef}
       className={cn(
         // base
-        'fixed inset-0 z-50 flex flex-col items-center justify-center overflow-y-auto bg-overlay p-4 backdrop-blur-[10px]',
+        'fixed inset-0 z-50 flex flex-col items-center justify-start overflow-y-auto bg-overlay p-4 backdrop-blur-[10px]',
         // animation
         'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
         className,
